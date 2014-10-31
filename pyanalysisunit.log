@@ -1,0 +1,197 @@
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d4c/classException__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d4c/classException__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d98/classobject__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d98/classobject__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d11/classpyanalysisunit__copy_1_100quickRun_1_1TestClass__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d11/classpyanalysisunit__copy_1_100quickRun_1_1TestClass__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d34/classfeat__select_1_1FeatureSelectorUI__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d34/classfeat__select_1_1FeatureSelectorUI__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d52/classfeat__select__ui_1_1Ui__Dialog__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d52/classfeat__select__ui_1_1Ui__Dialog__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/db4/classcompare__spine_1_1Timeout__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/db4/classcompare__spine_1_1Timeout__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d93/classfeat__select_1_1FeatureSelectorUI__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d93/classfeat__select_1_1FeatureSelectorUI__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d8c/classfeat__select__ui_1_1Ui__Dialog__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d8c/classfeat__select__ui_1_1Ui__Dialog__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d32/classcompare__spine_1_1Timeout__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d32/classcompare__spine_1_1Timeout__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/d2c/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/d2c/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d46/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d46/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d80/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d80/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d55/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d55/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d9/dcf/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d9/dcf/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/df7/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/df7/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d03/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d03/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/da8/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/da8/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/db2/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/db2/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/dc1/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/dc1/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/daf/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/daf/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/db6/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/db6/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d72/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d72/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/da9/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/da9/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/de1/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/de1/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d2/d0a/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d2/d0a/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d62/classScriptingServer_1_1ReplServer__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d62/classScriptingServer_1_1ReplServer__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d6b/classScriptingServer_1_1ReplServer__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d6b/classScriptingServer_1_1ReplServer__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d79/classTestModule_1_1Child__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d79/classTestModule_1_1Child__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_787402be7d3f1eb2b66349c4d3cf4fcf_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_787402be7d3f1eb2b66349c4d3cf4fcf_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/graph_legend.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/graph_legend.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/dd8/classTestModule_1_1Child__coll__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/dd8/classTestModule_1_1Child__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/de0/classTestModule_1_1Parent__inherit__graph.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/de0/classTestModule_1_1Parent__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_39cb757275e37155a578c8330915aa16_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_39cb757275e37155a578c8330915aa16_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_a288d8f51942b5760dbb46d153f156b7_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_a288d8f51942b5760dbb46d153f156b7_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_d9eb15ce32e8fd17a2239d6e4240cfd9_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_d9eb15ce32e8fd17a2239d6e4240cfd9_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_80a04d8ff33f45476602c180244698b1_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_80a04d8ff33f45476602c180244698b1_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_60c16f1a04d68b5ecb03b1546adde205_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_60c16f1a04d68b5ecb03b1546adde205_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_e6ded938266a09f4002f1618af71776b_dep.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_e6ded938266a09f4002f1618af71776b_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_0.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_0.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_1.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_1.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_5.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_5.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_2.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_2.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_3.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_3.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_4.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_4.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_6.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_6.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_7.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_7.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_10.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_10.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_9.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_9.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_8.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_8.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_11.dot" -Tpng -o "C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_11.png"'
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d4c/classException__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d98/classobject__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d32/classcompare__spine_1_1Timeout__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/db4/classcompare__spine_1_1Timeout__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d93/classfeat__select_1_1FeatureSelectorUI__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d34/classfeat__select_1_1FeatureSelectorUI__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d52/classfeat__select__ui_1_1Ui__Dialog__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d8c/classfeat__select__ui_1_1Ui__Dialog__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d11/classpyanalysisunit__copy_1_100quickRun_1_1TestClass__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d7/d46/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/d2c/classpyanalysisunit__copy_1_1analysisunit_1_1AnalysisUnitError__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d80/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/d55/classpyanalysisunit__copy_1_1combined__filter__classes_1_1DetectionState__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d9/dcf/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/da8/classpyanalysisunit__copy_1_1combined__filter__classes_1_1ObjectData__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/d03/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d8/df7/classpyanalysisunit__copy_1_1combined__filter__classes_1_1OptimizationProblemRoc__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/de/db2/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/dc1/classpyanalysisunit__copy_1_1multi__roc__calculator_1_1PersistentCache__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/daf/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dc/de1/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoResultsPending__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/d72/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/db6/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1NoWorkersAvailable__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d3/da9/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d2/d0a/classpyanalysisunit__copy_1_1threadpool__threaddata_1_1WorkerThread__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/df/d6b/classScriptingServer_1_1ReplServer__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/da/d62/classScriptingServer_1_1ReplServer__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d4/d79/classTestModule_1_1Child__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/db/dd8/classTestModule_1_1Child__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/d5/de0/classTestModule_1_1Parent__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_787402be7d3f1eb2b66349c4d3cf4fcf_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_39cb757275e37155a578c8330915aa16_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_a288d8f51942b5760dbb46d153f156b7_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_d9eb15ce32e8fd17a2239d6e4240cfd9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_80a04d8ff33f45476602c180244698b1_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_60c16f1a04d68b5ecb03b1546adde205_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/dir_e6ded938266a09f4002f1618af71776b_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_7.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_8.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_9.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_10.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file C:/users1/workspace/doc/codedoc/generated/pythontools/html/inherit_graph_11.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

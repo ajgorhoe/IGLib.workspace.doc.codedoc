@@ -1,0 +1,114 @@
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/Complex.cs:54: warning: argument 'imaginary' of command @param is not found in the argument list of IG::Num::complex::complex(double real)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexClass.cs:264: warning: argument 'number' of command @param is not found in the argument list of IG::Num::ComplexClass::operator ComplexClass(complex complexStruct)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexClass.cs:264: warning: The following parameters of IG::Num::ComplexClass::operator ComplexClass(complex complexStruct) are not documented:
+  parameter 'complexStruct'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrix.cs:85: warning: argument 'value' of command @param is not found in the argument list of IG::Num::ComplexMatrix::ComplexMatrix(int d1, int d2, double val)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrix.cs:85: warning: The following parameters of IG::Num::ComplexMatrix::ComplexMatrix(int d1, int d2, double val) are not documented:
+  parameter 'val'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrix.cs:195: warning: argument 'd1' of command @param is not found in the argument list of IG::Num::ComplexMatrix::Ones(int d)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrix.cs:195: warning: The following parameters of IG::Num::ComplexMatrix::Ones(int d) are not documented:
+  parameter 'd'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrixBase.cs:151: warning: argument 'columnCount' of command @param is not found in the argument list of IG::Num::ComplexMatrixBase::GetNewBase(int rowCount, int ColumnCount)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexMatrixBase.cs:151: warning: The following parameters of IG::Num::ComplexMatrixBase::GetNewBase(int rowCount, int ColumnCount) are not documented:
+  parameter 'ColumnCount'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:34: warning: argument 'vec' of command @param is not found in the argument list of IG::Num::ComplexVector::ComplexVector(IComplexVector complexvec)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:34: warning: The following parameters of IG::Num::ComplexVector::ComplexVector(IComplexVector complexvec) are not documented:
+  parameter 'complexvec'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:138: warning: argument 'd2' of command @param is not found in the argument list of IG::Num::ComplexVector::Ones(int n)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:138: warning: The following parameters of IG::Num::ComplexVector::Ones(int n) are not documented:
+  parameter 'n'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:146: warning: argument 'd2' of command @param is not found in the argument list of IG::Num::ComplexVector::Zeros(int n)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:146: warning: The following parameters of IG::Num::ComplexVector::Zeros(int n) are not documented:
+  parameter 'n'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:154: warning: argument 'd2' of command @param is not found in the argument list of IG::Num::ComplexVector::BasisVector(int n, int i)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVector.cs:154: warning: The following parameters of IG::Num::ComplexVector::BasisVector(int n, int i) are not documented:
+  parameter 'n'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:385: warning: argument 'dimenson' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Resize(ref IComplexVector vec, IComplexVector template, int dimension)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:385: warning: The following parameters of IG::Num::ComplexVectorBase::Resize(ref IComplexVector vec, IComplexVector template, int dimension) are not documented:
+  parameter 'dimension'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:422: warning: argument 'dimenson' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Resize(ref IComplexVector vec, int dimension)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:422: warning: The following parameters of IG::Num::ComplexVectorBase::Resize(ref IComplexVector vec, int dimension) are not documented:
+  parameter 'dimension'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:698: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAddPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:698: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAddPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:698: warning: The following parameters of IG::Num::ComplexVectorBase::ArrayAddPlain(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:712: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:712: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:712: warning: The following parameters of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:733: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:733: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:733: warning: The following parameters of IG::Num::ComplexVectorBase::ArrayAdd(IComplexVector a, double scal, ref IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:752: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtractPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:752: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtractPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:752: warning: The following parameters of IG::Num::ComplexVectorBase::ArraySubtractPlain(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:766: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:766: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:766: warning: The following parameters of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:787: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:787: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:787: warning: The following parameters of IG::Num::ComplexVectorBase::ArraySubtract(IComplexVector a, double scal, ref IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:806: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::MultiplyPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:806: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::MultiplyPlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:806: warning: The following parameters of IG::Num::ComplexVectorBase::MultiplyPlain(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:820: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:820: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:820: warning: The following parameters of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:841: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:841: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:841: warning: The following parameters of IG::Num::ComplexVectorBase::Multiply(IComplexVector a, double scal, ref IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:860: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ScalePlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:860: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::ScalePlain(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:860: warning: The following parameters of IG::Num::ComplexVectorBase::ScalePlain(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:874: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:874: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:874: warning: The following parameters of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:895: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:895: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:895: warning: The following parameters of IG::Num::ComplexVectorBase::Scale(IComplexVector a, double scal, ref IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:914: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::DividePlain(IComplexVector a, complex scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:914: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::DividePlain(IComplexVector a, complex scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:914: warning: The following parameters of IG::Num::ComplexVectorBase::DividePlain(IComplexVector a, complex scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:927: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:927: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:927: warning: The following parameters of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:947: warning: argument 'v1' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:947: warning: argument 'd' of command @param is not found in the argument list of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, ref IComplexVector result)
+D:/users/workspace/develop/shell/lib/LibCommon/0guests/Tako78/ComplexVectorBase.cs:947: warning: The following parameters of IG::Num::ComplexVectorBase::Divide(IComplexVector a, complex scal, ref IComplexVector result) are not documented:
+  parameter 'a'
+  parameter 'scal'
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:27: warning: argument 'fieldElementExtension' of command @param is not found in the argument list of IG::Sim::SimScalarFieldElementDto< FieldType >::SimScalarFieldElementDto(string fieldName)
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:83: warning: Unsupported xml/html tag <paramparam> found
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:83: warning: Unsupported xml/html tag </paramparam> found
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:84: warning: Unsupported xml/html tag <paramparam> found
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:84: warning: Unsupported xml/html tag </paramparam> found
+D:/users/workspace/develop/shell/lib/LibSim/SimulationDto/SimFieldComponent.cs:81: warning: The following parameters of IG::Sim::SimTensorFieldElementDto-g::SimTensorFieldElementDto(string fieldName, string fieldElementExtension, int elementRowIndex, int elementColumnIndex) are not documented:
+  parameter 'elementRowIndex'
+  parameter 'elementColumnIndex'
