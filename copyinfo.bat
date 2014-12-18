@@ -1,8 +1,12 @@
-set iglib1=..\..\base\iglib\License_IGLib.html
+
+set iglib1=..\..\base\iglib\License_IGLib_Redistributable.html
 set iglib2=..\..\base\iglib\ReadMe_IGLib.html
 
 set dociglib1=generated\iglib
 set dociglib2=generated\iglib\html
+
+set dociglib01=generated_with_sources\iglib
+set dociglib02=generated_with_sources\iglib\html
 
 set dociglib3=generated\develop
 set dociglib4=generated\develop\html
@@ -17,7 +21,13 @@ set dociglib8=generated\shell\html
 mkdir %dociglib1%
 mkdir %dociglib2%
 copy /y %iglib1% %dociglib1%
-copy /y %iglib2% %dociglib1%
+copy /y %iglib2% %dociglib2%
+
+mkdir %dociglib01%
+mkdir %dociglib2%
+copy /y %iglib1% %dociglib01%
+copy /y %iglib2% %dociglib02%
+
 copy /y %iglib1% %dociglib2%
 copy /y %iglib2% %dociglib2%
 
