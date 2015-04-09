@@ -20,7 +20,8 @@ CALL .\generate_develop_nafems.bat
 CALL .\generate_guest_marko_petek.bat
 CALL .\generate_NeurApp.bat
 CALL .\generate_shell.bat
-REM CALL .\generate_simulationtools.bat
+
+CALL .\generate_iglib.bat
 
 
 time /T
