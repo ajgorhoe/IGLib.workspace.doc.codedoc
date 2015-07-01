@@ -1,6 +1,6 @@
 
 
-rd /s /q generated_with_sources\iglib_all_with_sources\html\
+rd /s /q generated\iglib_all\html\
 
 generate.bat iglib_all
 

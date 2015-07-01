@@ -44,7 +44,7 @@ PROJECT_NUMBER         = 1.6.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The IGLib base library EXTENDED - with other lilbraries and applications."
+PROJECT_BRIEF          = "The IGLib base library - ALL with SOURCE references."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -58,7 +58,7 @@ PROJECT_LOGO           = ../../base/iglib/ig.ico
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = generated/igliball
+OUTPUT_DIRECTORY       = generated_with_sources/igliball_with_sources
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -925,7 +925,7 @@ USE_MDFILE_AS_MAINPAGE =
 # also VERBATIM_HEADERS is set to NO.
 # The default value is: NO.
 
-SOURCE_BROWSER         = NO
+SOURCE_BROWSER         = YES
 
 # Setting the INLINE_SOURCES tag to YES will include the body of functions,
 # classes and enums directly into the documentation.

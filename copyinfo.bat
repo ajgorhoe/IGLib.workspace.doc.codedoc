@@ -19,8 +19,11 @@ set dociglib6=generated\simulationtools\html
 set dociglib7=generated\shell
 set dociglib8=generated\shell\html
 
-set dociglib9=generated_with_sources\igliball_with_sources
-set dociglib10=generated_with_sources\igliball_with_sources\html
+set dociglib9=generated\igliball
+set dociglib10=generated\igliball\html
+
+set dociglib11=generated_with_sources\igliball_with_sources
+set dociglib12=generated_with_sources\igliball_with_sources\html
 
 
 mkdir %dociglib1%
@@ -78,6 +81,15 @@ copy /y %iglib3% %dociglib9%
 copy /y %iglib1% %dociglib10%
 copy /y %iglib2% %dociglib10%
 copy /y %iglib3% %dociglib10%
+
+mkdir %dociglib11%
+mkdir %dociglib12%
+copy /y %iglib1% %dociglib10%
+copy /y %iglib2% %dociglib10%
+copy /y %iglib3% %dociglib10%
+copy /y %iglib1% %dociglib11%
+copy /y %iglib2% %dociglib11%
+copy /y %iglib3% %dociglib11%
 
 
 
