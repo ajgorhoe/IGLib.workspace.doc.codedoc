@@ -53,7 +53,7 @@ PROJECT_BRIEF          = "IGLib - based computational shell for managing Artific
 # Doxygen will copy the logo to the output directory.
 # $$
 
-PROJECT_LOGO           = ../base/iglib/ig.ico
+PROJECT_LOGO           = ../../base/iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
 # base path where the generated documentation will be put.
@@ -622,17 +622,31 @@ WARN_LOGFILE           = iglib_shell.log
 # $$
 
 
+INPUT    =   "../../develop/shell/extensions/ExtShellApp"  
+INPUT   +=   "../../develop/shell/extensions/ExtShellAppExt"  
+INPUT   +=   "../../develop/shell/extensions/ExtNeuralApp"  
+INPUT   +=   "../../develop/shell/extensions/ExtAppIJS"  
+INPUT   +=   "../../develop/shell/extensions/ExtAppNeuralParametric"  
 
-INPUT     =   "../base/shelldev/extensions/ExtAppNeurApp" 
-INPUT     +=  "../base/iglib/extensions/ann/LibNeural" 
-INPUT     +=  "../base/shelldev/extensions/ExtShellLibIT" 
-INPUT     +=  "../base/shelldev/lib/LibCommon" 
-INPUT     +=  "../base/shelldev/lib/LibOpt" 
-INPUT     +=  "../base/shelldev/lib/extended/LibNeuralExt" 
-INPUT     +=  "../base/shelldev/lib/extended/LibNeuralExtForms" 
-INPUT     +=  "../base/shelldev/lib/extended/LibShellExt" 
+INPUT   +=   "../../develop/shell/extensions/ExtTestIgor"  
+INPUT   +=   "../../develop/shell/extensions/ExtTestTadej"  
 
-INPUT     +=  "../base/shelldev/igshell" 
+INPUT   +=   "../../develop/shell/lib/LibCommon"  
+INPUT   +=   "../../develop/shell/lib/LibOpt"  
+
+INPUT   +=   "../../develop/shell/lib/extended/LibNeuralExt"  
+INPUT   +=   "../../develop/shell/lib/extended/LibNeuralExtForms"  
+INPUT   +=   "../../develop/shell/lib/extended/LibShellExt"  
+
+INPUT   +=   "../../develop/shell/NeuralApp"  
+INPUT   +=   "../../develop/shell/Shell"  
+INPUT   +=   "../../develop/shell/ShellApp"  
+INPUT   +=   "../../develop/shell/ShellAppMess"  
+INPUT   +=   "../../develop/shell/Test_Igor"  
+INPUT   +=   "../../develop/shell/Test_Tadej"  
+INPUT   +=   "../../develop/shell/TestApp"  
+
+# INPUT   = "../../develop/shell/Neural"  "../../develop/shell/NeuralApp"  "../../develop/Shell/"  "../../develop/ShellApp/"  "../../develop/ShellAppMess/"  "../../develop/shell/extensions"  
 
 
 # This tag can be used to specify the character encoding of the source files
