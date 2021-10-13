@@ -17,6 +17,12 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
+# REMARK:
+# $$ mark denotes those parts that must be changed when creating documentation
+# for a new project.
+# ?? mark denotes that effect of the following options should be additionally 
+# checked
+
 # This tag specifies the encoding used for all characters in the config file
 # that follow. The default is UTF-8 which is also the encoding used for all text
 # before the first occurrence of this tag. Doxygen uses libiconv (or the iconv
@@ -38,13 +44,13 @@ PROJECT_NAME           = IGLib
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.7.1
+PROJECT_NUMBER         = 1.7.2
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The IGLib base library - with SOURCE references."
+PROJECT_BRIEF          = "The IGLib base library for development of numerical, technical and business applications."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -58,7 +64,7 @@ PROJECT_LOGO           = ../base/iglib/ig.ico
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = generated_with_sources/iglib_with_sources
+OUTPUT_DIRECTORY       = generated/iglib
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -133,7 +139,7 @@ ALWAYS_DETAILED_SEC    = NO
 # operators of the base classes will not be shown.
 # The default value is: NO.
 
-INLINE_INHERITED_MEMB  = YES
+INLINE_INHERITED_MEMB  = NO
 
 # If the FULL_PATH_NAMES tag is set to YES doxygen will prepend the full path
 # before files name in the file list and in the header files. If set to NO the
@@ -161,7 +167,7 @@ STRIP_FROM_PATH        = "../base/iglib"
 # specify the list of include paths that are normally passed to the compiler
 # using the -I flag.
 
-STRIP_FROM_INC_PATH    = "../base/"
+STRIP_FROM_INC_PATH    =
 
 # If the SHORT_NAMES tag is set to YES, doxygen will generate much shorter (but
 # less readable) file names. This can be useful is your file systems doesn't
@@ -748,7 +754,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # messages should be written. If left blank the output is written to standard
 # error (stderr).
 
-WARN_LOGFILE           = iglib_withsources.log
+WARN_LOGFILE           = iglib.log
 
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
@@ -783,8 +789,7 @@ INPUT_ENCODING         = UTF-8
 # *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
 # *.qsf, *.as and *.js.
 
-FILE_PATTERNS          = *.cs, *.c, *.cc, *.cxx, *.cpp, *.c++, *.java, \
-                         *.h, *.hh, *.hxx, *.hpp, *.h++
+FILE_PATTERNS          = *.cs
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
@@ -913,7 +918,7 @@ USE_MDFILE_AS_MAINPAGE =
 # also VERBATIM_HEADERS is set to NO.
 # The default value is: NO.
 
-SOURCE_BROWSER         = YES
+SOURCE_BROWSER         = NO
 
 # Setting the INLINE_SOURCES tag to YES will include the body of functions,
 # classes and enums directly into the documentation.
@@ -1110,8 +1115,7 @@ HTML_STYLESHEET        =
 # list). For an example see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-# HTML_EXTRA_STYLESHEET = 
-HTML_EXTRA_STYLESHEET = styles/doxygen_extrastyles.css
+HTML_EXTRA_STYLESHEET  =
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -2253,7 +2257,7 @@ DIRECTORY_GRAPH        = YES
 # The default value is: png.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_IMAGE_FORMAT       = svg
+DOT_IMAGE_FORMAT       = png
 
 # If DOT_IMAGE_FORMAT is set to svg, then this option can be set to YES to
 # enable generation of interactive SVG images that allow zooming and panning.
@@ -2265,7 +2269,7 @@ DOT_IMAGE_FORMAT       = svg
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-INTERACTIVE_SVG        = YES
+INTERACTIVE_SVG        = NO
 
 # The DOT_PATH tag can be used to specify the path where the dot tool can be
 # found. If left blank, it is assumed the dot tool can be found in the path.
