@@ -53,7 +53,7 @@ PROJECT_BRIEF          = "NeurApp - software for exploring approximation by arti
 # Doxygen will copy the logo to the output directory.
 # $$
 
-PROJECT_LOGO           = ../../base/iglib/ig.ico
+PROJECT_LOGO           = ../base/iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
 # base path where the generated documentation will be put.
@@ -622,14 +622,14 @@ WARN_LOGFILE           = NeurApp.log
 # $$
 
 
-INPUT     =   "../../base/shelldev/extensions/ExtAppNeurApp" 
-INPUT     +=  "../../base/iglib/extensions/ann/LibNeural" 
-INPUT     +=  "../../base/shelldev/extensions/ExtShellLibIT" 
-INPUT     +=  "../../base/shelldev/lib/LibCommon" 
-INPUT     +=  "../../base/shelldev/lib/LibOpt" 
-INPUT     +=  "../../base/shelldev/lib/extended/LibNeuralExt" 
-INPUT     +=  "../../base/shelldev/lib/extended/LibNeuralExtForms" 
-INPUT     +=  "../../base/shelldev/lib/extended/LibShellExt" 
+INPUT     =   "../base/shelldev/extensions/ExtAppNeurApp" 
+INPUT     +=  "../base/iglib/extensions/ann/LibNeural" 
+INPUT     +=  "../base/shelldev/extensions/ExtShellLibIT" 
+INPUT     +=  "../base/shelldev/lib/LibCommon" 
+INPUT     +=  "../base/shelldev/lib/LibOpt" 
+INPUT     +=  "../base/shelldev/lib/extended/LibNeuralExt" 
+INPUT     +=  "../base/shelldev/lib/extended/LibNeuralExtForms" 
+INPUT     +=  "../base/shelldev/lib/extended/LibShellExt" 
 
 
 # This tag can be used to specify the character encoding of the source files
