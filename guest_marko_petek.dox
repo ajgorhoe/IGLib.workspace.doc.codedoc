@@ -621,7 +621,14 @@ WARN_LOGFILE           = guest_marko_petek.log
 # with spaces.
 # $$
 
-INPUT                  = "../base/shelldev/0guests/marko_petek" 
+# Include dependencies from IGLib for completness:
+INPUT                  = "../base/iglib/igbase" \
+                         "../base/iglib/igforms" \
+                         "../base/iglib/reportermsg" \
+                         "../base/iglib/extensions"
+
+# Marko Petek's code for his graduate thesis:
+INPUT                  += "../base/shelldev/0guests/marko_petek" 
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is

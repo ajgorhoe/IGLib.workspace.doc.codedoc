@@ -1,4 +1,6 @@
 
+REM New developments wil be added here.
+
 set docname=%1
 
 rem This script generates documentation for %docname% in Doxygen. 

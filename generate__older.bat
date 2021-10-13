@@ -1,4 +1,10 @@
 
+REM Older generation code is stored here for reference.
+REM This was saved before merging modifications drom 2015 and later, used in
+REM documentation for some freelance projects (IG) whose code had to be separated
+REM from IGLib.
+REM WARNING: DO NOT MODIFY this file. It can be deleted when no longer needed.
+
 set docname=%1
 
 rem This script generates documentation for %docname% in Doxygen. 
