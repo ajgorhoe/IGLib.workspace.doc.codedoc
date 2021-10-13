@@ -53,7 +53,7 @@ PROJECT_BRIEF          = "Python tools for use with IGLib."
 # Doxygen will copy the logo to the output directory.
 # $$
 
-PROJECT_LOGO           =     ../../base/iglib/ig.ico
+PROJECT_LOGO           =     ../base/iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
 # base path where the generated documentation will be put.
@@ -626,15 +626,15 @@ WARN_LOGFILE           = pyanalysisunit.log
 # with spaces.
 # $$
 
-INPUT    =   "../../base/igsandbox/python/LearnPython" 
+INPUT    =   "../base/igsandbox/zz_Older\python/LearnPython" 
 
 # INPUT   +=   "../app_ProjectLinex/Source/Includes/IncludesH\"  
 
-# INPUT                  = "../../base/iglib/igbase" "../../base/iglib/igforms"  "../../base/iglib/reportermsg"  "../../base/iglib/extensions"  
+# INPUT                  = "../base/iglib/igbase" "../base/iglib/igforms"  "../base/iglib/reportermsg"  "../base/iglib/extensions"  
 
 FULL_PATH_NAMES        = YES
 
-STRIP_FROM_PATH        =  ../../base/igsandbox/python/LearnPython
+STRIP_FROM_PATH        =  ../base/igsandbox/python/LearnPython
 
 
 # This tag can be used to specify the character encoding of the source files
