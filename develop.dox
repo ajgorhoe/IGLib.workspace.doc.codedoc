@@ -53,7 +53,7 @@ PROJECT_BRIEF          = "Development version of the Unified Simulation Framewor
 # Doxygen will copy the logo to the output directory.
 # $$
 
-PROJECT_LOGO           = ../../base/iglib/ig.ico
+PROJECT_LOGO           = ../base/iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
 # base path where the generated documentation will be put.
@@ -621,9 +621,9 @@ WARN_LOGFILE           = develop.log
 # with spaces.
 # $$
 
-INPUT     =  "../../testdevelop/develop_nafems/SimulationLibrary"  
-INPUT     +=  "../../testdevelop/develop_nafems/SimulationLibrarySpecific"  
-INPUT     +=  "../../testdevelop/develop_nafems/nafems"
+INPUT     =  "../develop_cobik/archive/develop_nafems/SimulationLibrary"  
+INPUT     +=  "../develop_cobik/archive/develop_nafems/SimulationLibrarySpecific"  
+INPUT     +=  "../develop_cobik/archive/develop_nafems/nafems"
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is

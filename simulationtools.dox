@@ -53,7 +53,7 @@ PROJECT_BRIEF          = "The IGLib base library for numerical and other applica
 # Doxygen will copy the logo to the output directory.
 # $$
 
-PROJECT_LOGO           = ../../base/iglib/ig.ico
+PROJECT_LOGO           = ../base/iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
 # base path where the generated documentation will be put.
@@ -629,9 +629,10 @@ WARN_LOGFILE           = simulationtools.log
 # "../../develop/simulationtools/extensions"
 
 
-INPUT    =   "../../develop/simulationtools"  
-INPUT    +=  "../../develop/shell/lib/LibCommon"  
-INPUT    +=  "../../develop/shell/lib/LibSim"  
+INPUT    =   "../develop_cobik/archive/develop_nafems/SimulationLibrary"  
+INPUT    +=   "../develop_cobik/archive/develop_nafems/SimulationLibrarySpecific"  
+INPUT    +=  "../develop/shell/lib/LibCommon"  
+INPUT    +=  "../develop/shell/lib/LibSim"  
 
 
 # This tag can be used to specify the character encoding of the source files
