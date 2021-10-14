@@ -23,7 +23,7 @@ rem Reset the error level (by running an always successfull command):
 ver > nul
 
 rem Repository update parameters:
-set ModuleDirRelative=modules/IGLibEventAggregator
+set ModuleDirRelative=IGLibEventAggregator
 set CheckoutBranch=master
 set RepositoryAddress=https://github.com/ajgorhoe/IGLib.modules.IGLibEventAggregator.git
 rem Non-overridable:
