@@ -1,0 +1,99 @@
+/* Additional and overriding styles for test.dox, specified under 
+configuration option HTML_EXTRA_STYLESHEET.
+Remarks: 
+This stylesheet is also used for developing new stylesheets for official documentation.
+Configuration test_withsources.dox does not use these styles and has therefore original 
+styling. In this way, developed styles can be easily compared to original Doxygen style.
+ */
+
+#projectname
+{
+	font: 200% Impact, sans-serif;
+	font-weight:bold;
+	font-style:italic;
+	color: DarkCyan;
+}
+    
+#projectbrief
+{
+	font: 120% Lucida Sans, sans-serif;
+	color: DarkCyan;
+}
+
+#projectnumber
+{
+	font: 50% Lucida Sans, sans-serif;
+	color: DarkCyan;
+}
+
+body, table, div, p, dl {
+	font: 400 14px/22px Cambria;
+	color: Green; 
+	/* 
+	color: SeaGreen; 
+	color: DarkCyan 
+	*/	
+}
+
+p.reference, p.definition {
+	font: 400 14px/22px Cambria;
+}
+
+.title {
+	/* Titles of class pages and other pages */
+	font: Lucida Sans;
+	font-size: 180%;
+	color: DarkCyan;
+}
+
+div.dynheader {
+	/* Header for diagrams */
+	font-weight:bold;
+	color: DarkOrange;
+	/*
+	color: SaddleBrown;
+	*/
+}
+
+.memtitle, .groupheader {
+	/* See below for class descriptions! */
+	font: Lucida Sans;
+}
+h1.groupheader, h2.groupheader, h3.groupheader {
+	/* Headers like "Properties", "Public Member Functions", ... */
+	color: FireBrick;
+	font-weight:bold;
+	font-size: 160%;
+}
+.memtitle {
+	/* Names of methods, properties, etc. */
+	/* color: DarkMagenta; */
+	color: DarkViolet;
+}
+
+.memname {
+	/* Declarations */
+	font: Lucida Sans;
+	color: MediumBlue;
+}
+.paramtype {
+	/* Parameter type, e.g. in declarations */
+	color: Black;
+} 
+.paramname {
+	/* Parameter name, e.g. in declarations */
+	color: FireBrick;
+}
+
+
+a.el {
+	font-weight: normal;
+	font-style: italic;
+	color: DarkViolet;
+}
+a.el:visited {
+	color: MediumOrchid ;
+}
+
+
+
