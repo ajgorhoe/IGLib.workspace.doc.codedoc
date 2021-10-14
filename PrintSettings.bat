@@ -29,6 +29,16 @@ echo InitialDir:   %InitialDir%
 echo ScriptDir:    %ScriptDir%
 echo ScriptPath:   %ScriptPath%
 echo.
+echo Git info:
+echo CurrentBranchName: 
+echo   %CurrentBranchName%
+echo NormalizedBranchName: 
+echo   %NormalizedBranchName%
+echo CurrentCommitHash:
+echo   %CurrentCommitHash%
+echo Shortened commit hash:
+echo   %ShortenedCommitHash%
+echo.
 echo Configuration parameters:
 echo ConfigurationID:        %ConfigurationID%
 echo IsSourcesIncluded:      %IsSourcesIncluded%

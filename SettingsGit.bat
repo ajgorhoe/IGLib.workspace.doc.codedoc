@@ -1,8 +1,8 @@
 @echo off 
 rem Stores some Git related info in env. variables.
 
-echo.
-echo ======================================== %~n0%~x0:
+rem echo.
+rem echo ======================================== %~n0%~x0:
 
 rem Storing git info for the checked out repository in variables...
 
@@ -17,7 +17,7 @@ set NormalizedBranchName=%NormalizedBranchName:(=_%
 set NormalizedBranchName=%NormalizedBranchName:)=_%
 set NormalizedBranchName=%NormalizedBranchName:/=.%
 
-if 1 NEQ 0 (
+if 0 NEQ 0 (
     echo.
 	echo Git info:
 	echo CurrentBranchName: 
@@ -45,7 +45,7 @@ if 0 NEQ 0 (
 
 echo ERRORLEVEL: %ERRORLEVEL%
 echo.
-echo ======== End: %~n0%~x0
-echo.
+rem echo ======== End: %~n0%~x0
+rem echo.
 
 endlocal

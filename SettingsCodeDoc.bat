@@ -22,7 +22,7 @@ IF NOT DEFINED BinariesDeploymentMode set BinariesDeploymentMode=manual
 IF NOT DEFINED RunWithinCiBuild       set RunWithinCiBuild=0
 set DocumentationBaseDir=generated_with_sources
 
-IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 1 - after basic definitions.  & echo. )
+if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in basic definitions." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
 
 rem take into account script arguments:
@@ -50,15 +50,12 @@ rem Possible values for BinariesDeploymentMode (how binaries are provided):
   rem nuget      - from a NuGet package
 
 
-IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 2 - after argument interpretation.  & echo. )
-
 IF %RunWithinCiBuild% NEQ 0 (
   REM Scripts are run within a CI pipeline, apply CI-specific settings:
   SET LaunchDoc=0
   SET BinariesDeploymentMode=manual
   SET DeployDoc=0
 )
-
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in argument interpretation." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
@@ -80,9 +77,6 @@ goto AfterPathSpecified
 rem Placeholder for additional logic to specify binary paths, if necessary...
 
 :AfterPathSpecified
-
-
-IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 3 - after PATH updated.  & echo. )
 
 
 IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in defining executable location." & echo. & echo ERROR: %ErrorMessage% & echo. ))
