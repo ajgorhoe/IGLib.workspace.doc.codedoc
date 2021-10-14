@@ -6,7 +6,11 @@ WARNING - IMPORTANT - running doxygen directly:
   unrelated error message if the directory does not exist).
   Logs will give you better information that console output if Doxygen 
   fails.
-
+IMPORTANT:
+The following things must match for each kind of documentaion:
+  * Environment variable ConfigurationID set in the generation script
+  * Name of Doxygen configuration file
+  * Name of output directory in the above file, under OUTPUT_DIRECTORY
 
 Location: .../workspace/doc/codedoc/
 
