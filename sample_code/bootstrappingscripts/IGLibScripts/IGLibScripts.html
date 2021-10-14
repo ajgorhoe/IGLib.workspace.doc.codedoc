@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title>IGLibScripts module</title>
+  </head>
+  <body>
+    <br>
+    <h1>IGLibScripts Module<br>
+    </h1>
+    <br>
+    <i><b>Contents</b>:<br>
+    </i>
+    <ul>
+      <li><a href="#introduction"><i>Introduction</i></a></li>
+      <li><a href="#utilities"><i>Selected Utilities</i></a></li>
+      <ul>
+        <li><a href="#utilities_updaterepo"><i>UpdateRepo.bat</i></a></li>
+        <li><a href="#utilities_printreposettings"><i>PrintRepoSettings.bat</i></a></li>
+        <li><a href="#utilities_setvar"><i>SetVar.bat</i></a></li>
+        <li><a href="#utilities_runlocal"><i>RunLocal.bat</i></a></li>
+        <li><a href="#utilities_setscriptreferences"><i>SetScriptReferences.bat</i></a></li>
+        <li><i><a href="#utilities_printscriptreferences">PrintScriptReferences.bat</a><br>
+          </i></li>
+      </ul>
+    </ul>
+    <br>
+    <h2><a name="introduction"></a>Introduction</h2>
+    The IHLibScripts is an <i>IGLib</i> (<i>Investigation Generic
+      Library</i>) module that contains some useful batch scripts and
+    shell scripts used by the library (e.g. for managing repository
+    cloning and updates). <br>
+    Mainly these utilities are generally useful and their use is not
+    limited to <i>IGLib</i>.<br>
+    <br>
+    <h2><a name="utilities"></a>Selected Utilities</h2>
+    <br>
+    <h3><a name="utilities_updaterepo"></a>UpdateRepo.bat</h3>
+    Clones or updates a Git repository at particular location on the
+    disk. Parameters of the operation are obtained from environment
+    variables with a predefined meaning for this command. These
+    variables are:<br>
+    <blockquote><b><i>ModuleDir</i></b> - a directory into which the
+      repository is cloned.<br>
+      <b><i>CheckoutBranch</i></b> - branch that is checked out /
+      switched to by the command. <br>
+      <b><i>RepositoryAddress</i></b> - address of remote Git repository
+      that is cloned into the <i>ModuleDir</i> or from which repository
+      is updated (changes pulled).<br>
+      <b><i>Remote</i></b> (optional, default is <i>origin</i>) - name
+      of the main Git remote, corresponding to <i>RepositoryAddress</i>.
+      All remote operations executed by this script will act on remote
+      with this name.<br>
+      <b><i>RepositoryAddressSecondary</i></b> (optional, default is
+      undefined) - address of alternative remote repository. In case the
+      script performs cloning of the repository (which is when the
+      repository has not yet been cloned at the location specified by <i>ModuleDir</i>,
+      or when that directory does not contain a valid Git repository),
+      the secondary remote specified by <i>RemoteSecondary</i> will be
+      defined on the cloned repository and linked tho this address.<br>
+      <b><i>RemoteSecondary</i></b> (optional, default is <i>originsecondary</i>)
+      - name of the secondary remote. If the script performs cloning of
+      the repository at <i>RepositoryAddress</i> then&nbsp; it will
+      assign the address <i>RepositoryAddressSecondary</i> to a remote
+      named <i>RemoteSecondary</i>.<br>
+      <i><b>RepositoryAddressLocal</b></i> (optinal, default is
+      undefined) - an eventual additional alternative repository
+      address, usually a local repository but not necessarily. Behavior
+      is equivalent as for <i>RepositoryAddressSecondary</i> / <i>RemoteSecondary</i>:
+      If the variable is defined and not an empty string, and the script
+      also performs cloning (i.t., the repository is first cloned at the
+      location <i>ModuleDir</i>), then the script also defines the
+      remote named <i>RemoteLocal</i> <i></i>with this address.<br>
+      <i><b>RemoteLocal</b></i> (optional, default is <i>local</i>) -
+      name of the additional alternative origin whose address is set to
+      the value of <i>RepositoryAddressLocal</i> if this variable is
+      defined.<br>
+      <br>
+    </blockquote>
+    <b>Usage</b>:<br>
+    <blockquote><i>UpdateRepo.bat</i><br>
+      <blockquote>Clones or updates the repository whose address, local
+        checkout path, and other parameters are defined by the agreed
+        environment variables mentioned above.<br>
+        In order for this to work, environment variables that defines <b>parameters</b>
+        of operation (repository cloning or updating) <b>must be set
+          prior to calling the script</b> <i>UpdateRepo.bat</i>, and
+        this is most often done by packing these definitions into a
+        separate <i>settings script</i> and <i>calling</i> the script
+        before calling <i>UpdateRepo.bat</i>. <br>
+        The disadvantage of this approach is that the <i>settings
+          script</i> will have side effects (environment variables set)
+        in the context where <i>UpdateRepo.bat</i> is called, so
+        whenever we want to call the script in this way, we must pollute
+        the environment by setting the environment variables that carry
+        operation parameters for the script. This can be avoided by
+        calling the script in the second way, with <i>settings script</i>
+        and its eventual arguments <i>specified as argumens to the </i><i>UpdateRepo
+
+
+
+          call</i> (see the description below). In this way, the <i>settings
+
+
+
+        </i><i>script</i> will is called recursively within the body of
+        <i>UpdateRepo.bat</i>, enclosed in <i>setlocal / endlocal</i>
+        block, which prevents propagation of side effects the caller's
+        context.<br>
+      </blockquote>
+    </blockquote>
+    <blockquote><i>UpdateRepo.bat EmbeddedCommand &lt;arg 1 arg 2
+        ....&gt;</i><br>
+      <blockquote>This will first call the <i>EmbeddedCommand</i> with
+        eventual arguments (optional parameters <i>arg1</i>, <i>arg2</i>,
+        etc.), and then perform the repository update in the same manner
+        as <i>UpdateRepo</i> called without arguments.<br>
+        The <i>EmbeddedCommand</i> will typically be another batch <i>script
+
+
+
+          that sets all the relevant environment variables</i> that
+        define parameters for repository updating or cloning (see
+        description of parameters via environment variables above).<br>
+        The body of the <i>UpdateRepo.bat</i>&nbsp; script is <b>embedded
+
+
+
+          in setlocal / endlocal</b> block, therefore any <b>side
+          effects will not propagate to the caller environment</b>. This
+        applies for side effects of <i>UpdateRepo.bat</i> as well as <i>EmbeddedCommand</i>.<br>
+        It is desirable that <b><i>update setting scripts</i></b> (that
+        set environment variables carrying parameters for repository
+        updating operations), which are commonly specified as the <i>EmbeddedCommand</i>
+        argument, are also defined in the way that they can take
+        embedded command to be run (together with its arguments)
+        specified via command-line arguments of the settings script. In
+        this way, one can chain nested calls of useful commands or
+        scripts that are called recursively before the main body of the
+        <i>UpdateRepo</i> script is executed. This adds a great
+        flexibility to the repository updating scripts while preventing
+        the scripts from polluting the calling environment with
+        environment variables that are necessary to carry update
+        parameters to scripts. A typical use of this is passing to the <i>UpdateRepo</i>
+        script a settings script, e.g. <i>SettingsIGLibScripts.bat, </i>which
+
+
+
+        defines the necessary environment variables containing updating
+        parameters such as local directory and remote address (in this
+        example, for cloning / updating the IGLibScripts repository to a
+        specified location by the specified remote repository). Then,
+        with additional arguments, further commands can be passed to the
+        <i>SettingsIGLibScripts</i> script, which would be executed
+        recursively within <i>SettingsIGLibScripts.bat</i>, after the
+        script main body that sets the environment variables. These
+        further commands can for example modify some values set by the
+        script, which enables <b>reusing the settings script</b>, but <b>with
+
+
+
+          some updating parameters modified</b> (for example <b><i>ModuleDir</i></b>
+        or <b><i>RepositoryAddressSecondary</i></b>) to achieve a bit
+        different behavior. This can be achieved e.g. by the <i><b>SetVar.bat</b></i>
+        script (see its description), which sets the specified
+        environment variable. The (imaginary, assuming existence of
+        the&nbsp; setting <i>SettingsIGLibScripts.bat</i> script)
+        example command below would call the <i>UpdateRepo</i> script
+        to update (or clone) the repository defined by parameters set by
+        the <i>SettingsIGLibScripts</i> script, but overriding the
+        values of the <b><i>ModuleDir</i></b> (defining the
+        repository's local cloning directory) and the <b><i>CheckoutBranch</i></b>
+        (defining the branch that is checked out by the <i>UpdateRepo</i>
+        script):<br>
+        <blockquote><i><u>UpdateRepo</u> "</i><i><i>D:\GitUser</i>\RepositorySettings\SettingsIGLibScripts.bat"&nbsp;
+
+
+
+            <u>SetVar</u> ModuleDir "D:\GitUser\My Workspace" <u>SetVar</u>
+            CheckoutBranch "release/1.9.1"<br>
+          </i></blockquote>
+        The .bat extensions in some script names were omitted in the
+        above command, and scripts available in the <i>IGLibScripts</i>
+        repository are underlined. To check out how this actually works
+        in practice, refer to examples contained in &lt;<i>IGLibScripts</i>&gt;\examples_repos
+
+
+
+        .<br>
+      </blockquote>
+    </blockquote>
+    <b>Operation</b>:<br>
+    If<b> </b>the directory specified by&nbsp; does <b>not</b> contain
+    <b>a valid Git repository</b>, the directory is first <b>removed</b>
+    (recursively, including complete direcory structure). The script
+    must therefore be used with some caution, please take care that <b><i>ModuleDir</i></b><b>
+      does not point to a directory with useful content that is not a
+      clone of the repository specified by <i>RepositoryAddre</i><i>ss</i></b>.
+    <br>
+    Then, if the directory specified by&nbsp;<b><i>ModuleDir</i></b>
+    does <b>not exist</b>, the <b>repository at</b> the address <b><i>RepositoryAddress</i></b>
+    is <b>cloned into </b><b><i>ModuleDir</i></b>. After cloning is
+    complete, the <b>additional remotes are defined</b> on the cloned
+    repository, provided that the corresponding addresses, <b><i>RepositoryAddressSecondary</i></b>
+    or / and <i><b>RepositoryAddressLocal</b></i> are specified.
+    Finally, the remote branch specified by <b><i>CheckoutBranch</i></b>
+    is checked out and updated (pulled) from the main remote from which
+    repository was cloned.<br>
+    If the directory specified by <b><i>ModuleDir</i></b> <b>already
+      contains a Git repository</b> then the script will only <b>make
+      sure that the correct branch</b> (specified by <b><i>CheckoutBranch</i></b>)
+    <b>is checked out</b> and will <b>update the branch</b> by pulling
+    any changes <b>from the remote repository</b> (at <b><i>RepositoryAddress</i></b>).<br>
+    <br>
+    <b>Warning</b>: <br>
+    When repository already exists (so it does not need to be cloned),
+    the script will <b>not verify whether the repository contained in </b><b><b><i>ModuleDir</i></b>
+      is the correct one and corresponds to the remote repository at </b><b><b><i>RepositoryAddress</i></b></b>.
+    Performing&nbsp; such a check would require execution of additional
+    scripts (such scripts may be provided in the future).<br>
+    <br>
+    <h3><a name="utilities_printreposettings"></a>PrintRepoSettings.bat</h3>
+    Prints out values of the environment variables that are relevant
+    (contain parameter values) for scripts that update or clone
+    repositories.<br>
+    <b>Usage</b>:<br>
+    <blockquote><i>PrintRepoSettings.bat<br>
+      </i>
+      <blockquote>Just prints out (to the console) values of environment
+        variables that are used to define parameters for repository
+        updates (e.g. by the <i>UpdateRepo.bat</i> script). See
+        description of <i>UpdateRepo.bat</i> for description of the
+        relevant environment variables carrying update parameters.<br>
+      </blockquote>
+      <i><i>PrintRepoSettings</i>.bat EmbeddedCommand &lt;arg 1 arg 2
+        ....&gt;</i><br>
+      <blockquote>Prints out values of the environment variables
+        relevant for repository updates (in the same way as when calling
+        the script without arguments, such as above), but in addition to
+        that, the script runs the command <i>EmbeddedCommand</i>,
+        passing to it all the eventual remaining arguments (the optional
+        arguments <i>arg1</i>, <i>arg2</i>, etc.).<br>
+        Typically the <i>EmbeddedCommand</i> will be a script that also
+        sets the environment variables related to repository updating. <br>
+        The <i>EmbeddedCommand</i> is <b>run within a setlocal /
+          endlocal block</b>, therefore <b>no side effects</b> will
+        propagate to the calling environment.<br>
+      </blockquote>
+      <i></i></blockquote>
+    <br>
+    <h3><a name="utilities_setvar"></a>SetVar.bat</h3>
+    Sets the value of the specified environment variable. The script
+    requires at least two arguments, of which the first one is the name
+    of the environment variable and the second one is the value to be
+    assigned to this variable. The value assigned will persist in the
+    calling environment.<br>
+    Beside variable name and value, the script can <b>optionally</b>
+    take <b>further arguments</b>, which in this case define an <b>embedded
+
+
+
+      command with eventual arguments</b> executed recursively within
+    the script. The embedded command (when defined) is <b>executed
+      after the specified variable value is assigned</b>, and <b>any
+      side effects of the embedded command are propagated</b> to the
+    calling environment. This enables recursive chaining with other
+    commands (e.g., as in example with <i>UpdateRepo.bat </i>script
+    mentioned in script description) or setting multiple variables by a
+    single command-line, e.g.:<br>
+    <blockquote><i><u>SetVar</u> CloningDirectory "D:\My Repositories" <u>SetVar</u>
+        RepoAddress
+        https://github.com/ajgorhoe/IGLib.modules.IGLibScripts.git</i><br>
+    </blockquote>
+    <b>Usage</b>:<br>
+    <blockquote><i>SetVar.bat VariableName ValueAssigned</i><br>
+      <blockquote>Assigns the value <i>ValueAssigned</i> to environment
+        variable named <i>VariableName</i>. In line with Windows script
+        rules, the parameters must be embedded in double quotes if they
+        contain spaces.<br>
+      </blockquote>
+      <i>SetVar.bat VariableName ValueAssigned </i><i>EmbeddedCommand
+        &lt;arg 1 arg 2 ....&gt;</i></blockquote>
+    <blockquote>
+      <blockquote>The same as above, but in addition the <i>EmbeddedCommand
+
+
+
+        </i> is also executed recursively, receiving the eventual
+        remaining arguments (the optional <i>arg1</i>, <i>arg2</i>,
+        etc.)<br>
+        The <i>EmbeddedCommand</i> is <b><i>executed after the
+            variable is assigned</i></b>. In his way, the recursively
+        executed command can already make use of the newly assigned
+        value of the environment variable&nbsp;<i>VariableName</i> that
+        had been assigned by the script.<br>
+      </blockquote>
+    </blockquote>
+    <br>
+    <h3><a name="utilities_runlocal"></a>RunLocal.bat</h3>
+    Executes the specified command or script in a local context
+    (embedded in the setlocal / endlocal block), such that any changes
+    in definitions or values of environment variables that the command
+    may cause are not propagated to the calling environment.<br>
+    For exemple, if you run the following command in the console window:<br>
+    <blockquote><i>RunLocal SetVar xy NewValue</i><br>
+    </blockquote>
+    the <i>SetVar</i> script will set the value of the environment
+    variable named <i>xy</i> but the effect will only be local (limited
+    to the <i>RunLocal</i> script) and the assignment will not persist
+    in the calling environment after the call. This can be verified by
+    running<br>
+    <blockquote><i>set xy</i><i> </i><br>
+    </blockquote>
+    or <br>
+    <blockquote><i>echo %xy%</i><br>
+    </blockquote>
+    in the same console window after running the above command. On the
+    contrary, when running <i>SetVar</i> script directly, i.e.:<br>
+    <blockquote><i>SetVar xy NewValue</i></blockquote>
+    &nbsp;the variable <i>xy</i> will actually be defined in the
+    calling environment after the call and its value will be&nbsp;<i>NewValue</i>,
+    as expected.<br>
+    <br>
+    At first glance this does not seem like a very useful functionality,
+    however, it may be quite valuable when testing the scripts similar
+    to those contained&nbsp; in the IGLibScripts repository, or in case
+    of these scripts, also to contain side effects of scripts that do
+    something but also have unintentional side effects.<br>
+    <br>
+    For example, several scripts described in this document can
+    recursively run embedded commands that can be specified via
+    additional command-line arguments that follow those that are
+    requested (if any). Batch scripts of the Windows command shell are
+    rather limited in how command-line arguments can be processed within
+    scripts (e.g. in the number of arguments that can be referenced by
+    consecutive numbers, like %1, %2, etc., limited to 9; or the ways
+    how arbitrary groups of command-line arguments can be passed on to
+    commands run recursively). In order to evade some of these
+    limitations we needed to define auxiliary variables used to assemble
+    command-lines for recursive commands, and in some scripts this
+    cannot be done within <i>setlocal</i> / <i>endlocal</i> block
+    because some side effect need to propagate to the calling
+    environment. Therefore, when recursively chaining several commands,
+    it may sometimes make sens to break propagation of side effect at
+    some point in hierarchy, and this can be achieved by using the <i>RunLocal.bat</i>
+    script.<br>
+    <br>
+    The other usage is in testing. Some scripts have intended side
+    effects, such as <i>SetScriptReferences.bat</i> or <i>SetVar..bat</i>.
+    Sometimes when troubleshooting issues ans debugging or testing such
+    scripts in a console, we want to run them in sequences but want to
+    preserve intact environment between successive calls, such that each
+    group of tests would run under the same conditions (without having
+    specific variables set by these scripts before running the next
+    test). The <i>SetLocal</i> script may come handy in such
+    situations.<br>
+    <br>
+    <b>Usage</b>:<br>
+    <blockquote><i>SetLocal.bat </i><i>EmbeddedCommand &lt;arg 1 arg 2
+        ....&gt;<br>
+      </i>
+      <blockquote>Executes the command <i>EmbeddedCommand</i>, passing
+        it the optional command-line arguments when defined (the
+        optional arguments <i>arg1</i>, <i>arg2</i>, etc.), within the
+        <i><b>setlocal</b></i> / <i><b>endlocal</b></i> block, such
+        that changes such as environment variables defined or changed by
+        the script are not propagated to the calling environment.<br>
+      </blockquote>
+    </blockquote>
+    <br>
+    <h3><a name="utilities_setscriptreferences"></a>SetScriptReferences.bat</h3>
+    Sets a set of predetermined environment variables to the paths of
+    the current locally cloned <i>IGLibScripts</i> repository and some
+    commonly used scripts within that are included in the repository.
+    The assignment of environment variables defined by the script
+    propagate back to the caller's environment.<br>
+    <br>
+    This script is commonly used in bootstrapping scripts, which take
+    care that the <i>IGLibScripts</i> is cloned at known location such
+    that its scripts can be used. There are several advantages in
+    putting script paths into environment variables. The scripts can in
+    this way be run in shorter form, e.g.:<br>
+    &nbsp;&nbsp;&nbsp; <i><u>"%UpdateRepo%"</u> .\SettingsIGLibCore <u>"%SetVar%"</u>
+      ModuleDir ..\modules\IGLibCore</i><br>
+    <br>
+    The second advantage is that reasonable attempts will be made that
+    names of these meaningful variables will remain unchanged, while
+    relative locations of the corresponding scripts within the <i>IGLibScripts</i>
+    repository or script names may change often.<br>
+    If a location within the <i>IGLibScripts</i> repository or name of
+    a certain script would change, the <i>SetScriptReferences.bat</i>
+    would be updated accordingly to reflect the new path (if not, this
+    would be a bug). In case that some variable name is found strange
+    and would be changed, the previous name can still remain set in the
+    script for some time.<br>
+    <br>
+    The following environment variables are defined by the script:<br>
+    <blockquote><i><b>IGLibScripts</b></i> is set to the absolute path
+      path of the cloned <i>IGLibScripts</i> repository from which the
+      batch script was called.<br>
+      <i><b>UpdateRepo</b></i> is set to the full absolute path of the
+      script <i>UpdateRepo.bat</i> contained in the locally cloned <i>IGLibScripts</i>
+      repository from which the <i>SetScriptReferences</i> script was
+      called.<br>
+      <i><b>SetVar</b></i> is set to the absolute path of the <i>SetVar.bat</i>
+      script.<br>
+      <i><b>PrintRepoSettings</b></i> is set to the absolute path of the
+      <i>PrintRepoSettings.bat</i> script. <br>
+      <i><b>SetScriptReferences</b></i> is set to the absolute path of
+      the <i>SetScriptReferences.bat</i> script.<br>
+      <i><b>PrintScriptReferences</b></i> is set to the absolute path of
+      the <i>PrintScriptReferences.bat</i> script.<br>
+    </blockquote>
+    <br>
+    <h3><a name="utilities_printscriptreferences"></a>PrintScriptReferences.bat<br>
+    </h3>
+    Prints values of environment variables that are set by <i>SetScriptReferences.bat</i>.<br>
+    <b>Usage</b>:<br>
+    <blockquote><i>PrintScriptReferences.bat<br>
+      </i>
+      <blockquote>Just prints the values of environment variables that
+        are set by the <i>SetScriptReferences</i> script.<br>
+      </blockquote>
+      <i><i>PrintScriptReferences</i>.bat </i><i>EmbeddedCommand
+        &lt;arg 1 arg 2 ....&gt;</i><i></i><br>
+      <blockquote>Beside printing the variables as described above, this
+        also executes the command <i>EmbeddedCommand</i>, passing it
+        the optional command-line arguments when defined (the optional
+        arguments <i>arg1</i>, <i>arg2</i>, etc.). The command is
+        executed before printing of variables is performed. This can be
+        used e.g. to run the <i>SetScriptReferences</i> script, which
+        sets the variables, before they are printed. Execution of the <i>EmbeddedCommand</i>
+        is performed within the <i><b>setlocal</b></i> / <i><b>endlocal</b></i>
+        block, such that changes such as environment variables defined
+        or changed by the command are not propagated to the calling
+        environment. This is particularly useful for testing.<br>
+      </blockquote>
+      <blockquote> </blockquote>
+    </blockquote>
+    <br>
+    <br>
+  </body>
+</html>
