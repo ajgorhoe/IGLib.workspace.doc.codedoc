@@ -3,7 +3,6 @@ rem Stores some Git related info in env. variables.
 
 echo.
 echo ======================================== %~n0%~x0:
-echo.
 
 rem Storing git info for the checked out repository in variables...
 
