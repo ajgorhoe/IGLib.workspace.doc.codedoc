@@ -30,14 +30,10 @@ echo ScriptDir:    %ScriptDir%
 echo ScriptPath:   %ScriptPath%
 echo.
 echo Git info:
-echo CurrentBranchName: 
-echo   %CurrentBranchName%
-echo NormalizedBranchName: 
-echo   %NormalizedBranchName%
-echo CurrentCommitHash:
-echo   %CurrentCommitHash%
-echo Shortened commit hash:
-echo   %ShortenedCommitHash%
+echo CurrentBranchName:    %CurrentBranchName%
+echo NormalizedBranchName: %NormalizedBranchName%
+echo CurrentCommitHash:    %CurrentCommitHash%
+echo Shortened hash:       %ShortenedCommitHash%
 echo.
 echo Configuration parameters:
 echo ConfigurationID:        %ConfigurationID%
@@ -61,17 +57,20 @@ echo BinariesSourceRepository: %BinariesSourceRepository%
 echo BinariesSourceSharedDir:  %BinariesSourceSharedDir%
 echo.
 
+if %ERRORLEVEL% NEQ 0 goto Finalize
 echo.
 echo Checking executables in PATH (not necessarily used):
 where doxygen.exe
 echo where gvmap.exe:
 where gvmap.exe
 echo.
+ver > nul
 
 rem echo.
 rem echo PATH: %PATH%
 rem echo.
 
+:Finalize
 echo ERRORLEVEL: %ERRORLEVEL%
 echo.
 echo ======== End: %~n0%~x0
