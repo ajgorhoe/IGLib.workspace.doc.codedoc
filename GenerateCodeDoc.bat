@@ -10,12 +10,38 @@ rem Reset the error level:
 ver > nul
 
 rem Read configuration:
+echo.
+echo Setting configuration variables, calling: 
+echo   "%ScriptDir%SettingsCodeDoc.bat" %*
+echo
 call "%ScriptDir%SettingsCodeDoc.bat" %*
+rem Print configuration:
+call "%ScriptDir%SettingsCodeDoc.bat"
 
-IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in reading settings." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
+if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in reading settings." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
+rem Clone the binaries repository if it does not exist:
+if not exist "%BinariesContainingPathRepository%\.git\objects" (
+  echo.
+  echo Repository cloning directory does not exist.
+  echo Cloning the repository...
+  git.exe clone --progress -v "%BinariesSourceRepository%" "%BinariesContainingPathRepository%"
+  echo   ... done.
+) else (
+  echo.
+  echo Repository cloning directory exists.
+  echo Updating contents using git pull...
+  cd %BinariesContainingPathRepository%
+  git.exe pull --progress -v --no-rebase "origin"
+  cd %ScriptDir%
+  echo   ... done.
+)
+echo.
+echo ... binaries from repository available.
+goto AfterBinariesRetrieved
 
-
+rem Placeholder for more complex binary update schemes:
+:AfterBinariesRetrieved
 
 
 cd "%ScriptDir%%ConfigurationSubdir%"

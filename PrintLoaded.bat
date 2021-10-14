@@ -26,8 +26,10 @@ echo ScriptDir: %ScriptDir%
 echo ExePath:   %ExePath%
 echo.
 
+ver > nul
 echo.
-Echo Calling command: call "%ScriptDir%SettingsCodeDoc.bat" %*
+Echo Calling command: 
+echo   "%ScriptDir%SettingsCodeDoc.bat" %*
 call "%ScriptDir%SettingsCodeDoc.bat" %*
 echo.
 

@@ -6,8 +6,8 @@ ver > nul
 
 set ScriptDir=%~dp0
 set InitialDir=%CD%
-set ScriptPath=%ScriptDir%%0
-set ExeFile=%~n0
+set ScriptPath=%ScriptDir%%~n0%~x0
+set ExeFile=%~n0%~x0
 set ErrorMessage=
 
 
@@ -15,12 +15,14 @@ rem Set default values for generation parameters, if not defined by caller:
 IF NOT DEFINED ConfigurationExtension set ConfigurationExtension=.dox
 IF NOT DEFINED ConfigurationID        set ConfigurationID=test
 IF NOT DEFINED IsSourcesIncluded      set IsSourcesIncluded=1
-IF NOT DEFINED ConfigurationSubdir    set ConfigurationSubdir=.\
+rem IF NOT DEFINED ConfigurationSubdir    set ConfigurationSubdir=.\
 IF NOT DEFINED LaunchDoc              set LaunchDoc=1
 IF NOT DEFINED DeployDoc              set DeployDoc=0
 IF NOT DEFINED BinariesDeploymentMode set BinariesDeploymentMode=manual
 IF NOT DEFINED RunWithinCiBuild       set RunWithinCiBuild=0
 set DocumentationBaseDir=generated_with_sources
+
+IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 1 - after basic definitions.  & echo. )
 
 
 rem take into account script arguments:
@@ -46,7 +48,18 @@ rem Possible values for BinariesDeploymentMode (how binaries are provided):
   rem none       - Doxygen and Graphviz are run from local  installation
   rem repository - from git repository
   rem nuget      - from a NuGet package
-  
+
+
+
+echo.
+echo Inside %~n0%~x0, before error check 2...
+echo.
+IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 2 - after argument interpretation.  & echo. )
+
+echo.
+echo Inside %~n0%~x0, after error check...
+echo.
+
 
 IF %RunWithinCiBuild% NEQ 0 (
   REM Scripts are run within a CI pipeline, apply CI-specific settings:
@@ -66,15 +79,19 @@ set BinariesSourceRepository=https://github.com/ajgorhoe/IGLib.workspace.doc.cod
 set BinariesSourceSharedDir=%ScriptDir%\bin
 set DeploymentBaseDir=%ScriptDir%\..\deployment\codedoc
 
-set BinariesContainingPathRepository=%ScriptDir%
+set BinariesContainingPathRepository=%ScriptDir%..\codedoc_resources
 
-set PATH=%BinariesContainingPathRepository%\bin\doxygen;%BinariesContainingPathRepository%\bin\graphviz\bin;%PATH%
+set BinariesContainingPath=%BinariesContainingPathRepository%
+set PATH=%BinariesContainingPath%\bin\doxygen;%BinariesContainingPath%\bin\graphviz\bin;%PATH%
 echo ... path specified, mode = repository:
 goto AfterPathSpecified
 
 rem Placeholder for additional logic to specify binary paths, if necessary...
 
 :AfterPathSpecified
+
+
+IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 3 - after PATH updated.  & echo. )
 
 
 IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in defining executable location." & echo. & echo ERROR: %ErrorMessage% & echo. ))
