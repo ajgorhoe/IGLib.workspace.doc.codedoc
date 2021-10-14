@@ -11,6 +11,10 @@ rd /s /q generated\test\html\
 if 1 NEQ 0 (
   measuretime generate.bat test
   goto finalize
+) else (
+
+  GenerateCodeDoc.bat test
+  
 )
 
 :finalize
