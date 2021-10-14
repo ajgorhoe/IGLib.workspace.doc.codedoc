@@ -2,3 +2,8 @@
 0000trash/trash_contents
 *.log
 *.bak
+
+/SettingsCodeDoc_COPY.bat
+/generate_COPY.bat
+/GenerateCodeDoc_COPY.bat
+/generate_test_COPY.bat

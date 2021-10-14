@@ -29,7 +29,7 @@ rem take into account script arguments:
 set NumArgs=0
 for %%d in (%*) do set /A NumArgs+=1
 
-echo Arguments to SettingsCodeDoc.bat:
+echo Arguments to %~n0%~x0: NumArgs=%NumArgs%
 if %NumArgs% GEQ 1 (echo   Arg. 1: %1)
 if %NumArgs% GEQ 2 (echo   Arg. 2: %2)
 if %NumArgs% GEQ 3 (echo   Arg. 3: %3)

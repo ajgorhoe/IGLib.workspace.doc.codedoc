@@ -8,6 +8,9 @@ set ScriptDir=%~dp0
 set StoredErrorLevel=0
 rem Reset the error level:
 ver > nul
+echo.
+echo ======================================== %~n0%~x0:
+
 
 rem Read configuration:
 echo.
@@ -16,7 +19,7 @@ echo   "%ScriptDir%SettingsCodeDoc.bat" %*
 echo
 call "%ScriptDir%SettingsCodeDoc.bat" %*
 rem Print configuration:
-call "%ScriptDir%SettingsCodeDoc.bat"
+call "%ScriptDir%PrintSettingsCodeDoc.bat"
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in reading settings." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
@@ -51,10 +54,18 @@ cd "%ScriptDir%"
 
 IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in Doxygen generation process." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
+if %LaunchDoc% NEQ 0 (
+  echo.
+  echo Launching documentation in browser...
+  echo Location of doc. index: "%DocumentationIndexPath%"
+  "%DocumentationIndexPath%"
+  echo   ... done.
+  echo.
+)
 
 
 
-
+:Finalize
 
 if %StoredErrorLevel% NEQ 0 (
   set ERRORLEVEL=%StoredErrorLevel%
@@ -64,6 +75,9 @@ if %StoredErrorLevel% NEQ 0 (
   echo   Error message: %ErrorMessage%
   exit /b %StoredErrorLevel%
 )
+echo.
+echo ======== End: %~n0%~x0
+echo.
 
 endlocal
 

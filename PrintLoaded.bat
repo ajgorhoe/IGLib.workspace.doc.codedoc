@@ -36,7 +36,7 @@ echo.
 IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error after loading settings." & echo. & echo ERROR: %ErrorMessage% & echo. ))
 
 echo.
-call "%ScriptDir%PrintSettings" %*
+call "%ScriptDir%PrintSettingsCodeDoc" %*
 echo.
 
 IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in printing settings." & echo. & echo ERROR: %ErrorMessage% & echo. ))

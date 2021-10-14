@@ -13,7 +13,8 @@ rem Define configuration parameters for this specific script:
 set ConfigurationID=test
 set IsSourcesIncluded=0
 set ConfigurationSubdir=.\
-set OldGenerationMode=1
+
+set OldGenerationMode=0
 
 echo.
 echo ======================================== %~n0%~x0:
@@ -33,10 +34,9 @@ if %OldGenerationMode% NEQ 0 (
 rem Execute the script that generates the configured code 
 rem documentation (the new way):
 echo.
-echo running the generation script:
-echo.
-echo call "%ThisScriptDir%generate.bat" %ConfigurationID% %IsSourcesIncluded% %ConfigurationSubdir% %*
-call "%ThisScriptDir%generate.bat" %ConfigurationID% %IsSourcesIncluded% %ConfigurationSubdir% %*
+echo Running the generation script:
+echo   "%ThisScriptDir%GenerateCodeDoc.bat" %ConfigurationID% %IsSourcesIncluded% %ConfigurationSubdir% %*
+call "%ThisScriptDir%GenerateCodeDoc.bat" %ConfigurationID% %IsSourcesIncluded% %ConfigurationSubdir% %*
 
 IF %ERRORLEVEL% NEQ 0 (
   echo.
