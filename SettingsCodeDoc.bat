@@ -50,16 +50,7 @@ rem Possible values for BinariesDeploymentMode (how binaries are provided):
   rem nuget      - from a NuGet package
 
 
-
-echo.
-echo Inside %~n0%~x0, before error check 2...
-echo.
 IF %ERRORLEVEL% NEQ 0 ( echo. & echo ERROR in %~n0%~x0 at 2 - after argument interpretation.  & echo. )
-
-echo.
-echo Inside %~n0%~x0, after error check...
-echo.
-
 
 IF %RunWithinCiBuild% NEQ 0 (
   REM Scripts are run within a CI pipeline, apply CI-specific settings:
@@ -130,9 +121,10 @@ SET DeploymentSubdirCommit=%NormalizedBranchName%\commits\%ShortenedCommitHash%
 SET DeploymentDirHead=%DeploymentBaseDir%\%DeploymentSubdirHead%
 SET DeploymentDirCommit=%DeploymentBaseDir%\%DeploymentSubdirCommit%
 
-rem Set specific settings:
-rem call "%ScriptDir%SettingsSpecific.bat"
+IF %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error after defining deployment parameters." & echo. & echo ERROR: %ErrorMessage% & echo. ))
 
+rem Placeholder: Set specific settings:
+rem call "%ScriptDir%SettingsSpecific.bat"
 
 :NextStatement
 
@@ -143,7 +135,7 @@ rem call "%ScriptDir%SettingsSpecific.bat"
 :Finalize
 IF %ERRORLEVEL% NEQ 0 (
   echo.
-  echo An ERROR occurred in %0:
+  echo An ERROR occurred in %~n0%~x0:
   echo   ERRORLEVEL = %ERRORLEVEL%
   echo   Error message: %ErrorMessage%
   echo.
