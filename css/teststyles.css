@@ -1,9 +1,7 @@
 /* Additional and overriding styles for test.dox, specified under 
 configuration option HTML_EXTRA_STYLESHEET.
 Remarks: 
-This stylesheet is also used for developing new stylesheets for official documentation.
-Configuration test_withsources.dox does not use these styles and has therefore original 
-styling. In this way, developed styles can be easily compared to original Doxygen style.
+This stylesheet is also used for developing new stylesheets.
  */
 
 #projectname

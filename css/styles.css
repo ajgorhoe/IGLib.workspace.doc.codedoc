@@ -1,6 +1,7 @@
 /*
-Custom stylesheets for official documentation.
-Specified under configuration option HTML_EXTRA_STYLESHEET.
+Custom stylesheets for code documentation.
+Specify this style sheet under configuration option HTML_EXTRA_STYLESHEET
+in .dox configuration files.
 */
 
 #projectname
