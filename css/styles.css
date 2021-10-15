@@ -4,45 +4,95 @@ Specify this style sheet under configuration option HTML_EXTRA_STYLESHEET
 in .dox configuration files.
 */
 
-#projectname
-{
-	font: 200% Impact, sans-serif;
-	font-weight:bold;
-	font-style:italic;
-	color: DarkCyan;
-}
-    
-#projectbrief
-{
-	font: 120% Lucida Sans, sans-serif;
-	color: DarkCyan;
-}
-
-#projectnumber
-{
-	font: 50% Lucida Sans, sans-serif;
-	color: DarkCyan;
-}
 
 body, table, div, p, dl {
 	font: 400 14px/22px Cambria;
-	color: Green; 
+	color: DarkCyan; 
 	/* 
 	color: SeaGreen; 
 	color: DarkCyan 
 	*/	
 }
 
+
+#projectname
+{
+	font: 300% Georgia, serif;
+	/*
+	font: 200% Impact, sans-serif;
+	*/
+	font-weight:bold;
+	font-style:italic;
+	color: FireBrick;
+	/*
+	color: DarkCyan;
+	*/
+}
+    
+#projectbrief
+{
+	font: 120% Lucida Sans, sans-serif;
+	font-style:italic;
+	color: DarkViolet;
+	/*
+	color: DarkCyan;
+	*/
+}
+
+#projectnumber
+{
+	font: 50% Lucida Sans, sans-serif;
+	/*
+	color: DarkCyan;
+	*/
+}
+
+div#titlearea
+{
+	/*
+	background-color: rgb(255, 255, 153);
+	*/
+	background-color: DarkSalmon;
+	background-color: DarkSalmon;
+	padding:5px;
+}
+
+#nav-tree {
+	background-color: Lavender;
+}
+
+#doc-content {
+	background-color: #e6ffff;
+	/*
+	background-color: LightYellow;
+	*/
+}
+
+.directory tr.even {
+	background-color: #ccffff;
+	/*
+	background-color: LemonChiffon;
+	*/
+}
+
 p.reference, p.definition {
 	font: 400 14px/22px Cambria;
 }
 
-.title {
+.headertitle .title {
 	/* Titles of class pages and other pages */
+	font: 200% Georgia, serif;
+	font-weight:bold;
+	font-style:italic;
+	color: FireBrick;
+	/*
 	font: Lucida Sans;
 	font-size: 180%;
 	color: DarkCyan;
+	*/
 }
+
+
 
 div.dynheader {
 	/* Header for diagrams */
