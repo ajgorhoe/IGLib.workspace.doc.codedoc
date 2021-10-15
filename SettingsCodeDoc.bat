@@ -63,7 +63,7 @@ set BinariesContainingPathManual=%ScriptDir%..\..\codedoc_resources_manual
 set BinariesContainingPathSharedDir=%ScriptDir%..\..\codedoc_resources_shareddir
 set DoxygenVersionNuGet=1.8.14
 set GraphvizVersionNuGet=2.38.0.2
-set BinariesSourceRepository=https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc.git
+set BinariesSourceRepository=https://github.com/ajgorhoe/IGLib.workspace.codedoc_resources.git
 set BinariesSourceSharedDir=%ScriptDir%\bin
 set DeploymentBaseDir=%ScriptDir%\..\deployment\codedoc
 
