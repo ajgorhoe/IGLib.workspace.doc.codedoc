@@ -12,14 +12,14 @@ set ErrorMessage=
 
 
 rem Set default values for generation parameters, if not defined by caller:
-IF NOT DEFINED ConfigurationExtension set ConfigurationExtension=.dox
-IF NOT DEFINED ConfigurationID        set ConfigurationID=test
-IF NOT DEFINED IsSourcesIncluded      set IsSourcesIncluded=1
-rem IF NOT DEFINED ConfigurationSubdir    set ConfigurationSubdir=.\
-IF NOT DEFINED LaunchDoc              set LaunchDoc=1
-IF NOT DEFINED DeployDoc              set DeployDoc=0
-IF NOT DEFINED BinariesDeploymentMode set BinariesDeploymentMode=manual
-IF NOT DEFINED RunWithinCiBuild       set RunWithinCiBuild=0
+if not defined ConfigurationExtension set ConfigurationExtension=.dox
+if not defined ConfigurationID        set ConfigurationID=test
+if not defined IsSourcesIncluded      set IsSourcesIncluded=1
+rem if not defined ConfigurationSubdir    set ConfigurationSubdir=.\
+if not defined LaunchDoc              set LaunchDoc=1
+if not defined DeployDoc              set DeployDoc=0
+if not defined BinariesDeploymentMode set BinariesDeploymentMode=manual
+if not defined RunWithinCiBuild       set RunWithinCiBuild=0
 set DocumentationBaseDir=generated_with_sources
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in basic definitions." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
