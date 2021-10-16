@@ -12,14 +12,14 @@ set ErrorMessage=
 
 
 rem Set default values for generation parameters, if not defined by caller:
-IF NOT DEFINED ConfigurationExtension set ConfigurationExtension=.dox
-IF NOT DEFINED ConfigurationID        set ConfigurationID=test
-IF NOT DEFINED IsSourcesIncluded      set IsSourcesIncluded=1
-rem IF NOT DEFINED ConfigurationSubdir    set ConfigurationSubdir=.\
-IF NOT DEFINED LaunchDoc              set LaunchDoc=1
-IF NOT DEFINED DeployDoc              set DeployDoc=0
-IF NOT DEFINED BinariesDeploymentMode set BinariesDeploymentMode=manual
-IF NOT DEFINED RunWithinCiBuild       set RunWithinCiBuild=0
+if not defined ConfigurationExtension set ConfigurationExtension=.dox
+if not defined ConfigurationID        set ConfigurationID=test
+if not defined IsSourcesIncluded      set IsSourcesIncluded=1
+rem if not defined ConfigurationSubdir    set ConfigurationSubdir=.\
+if not defined LaunchDoc              set LaunchDoc=1
+if not defined DeployDoc              set DeployDoc=0
+if not defined BinariesDeploymentMode set BinariesDeploymentMode=manual
+if not defined RunWithinCiBuild       set RunWithinCiBuild=0
 set DocumentationBaseDir=generated_with_sources
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in basic definitions." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
@@ -50,11 +50,11 @@ rem Possible values for BinariesDeploymentMode (how binaries are provided):
   rem nuget      - from a NuGet package
 
 
-IF %RunWithinCiBuild% NEQ 0 (
+if %RunWithinCiBuild% NEQ 0 (
   REM Scripts are run within a CI pipeline, apply CI-specific settings:
-  SET LaunchDoc=0
-  SET BinariesDeploymentMode=manual
-  SET DeployDoc=0
+  set LaunchDoc=0
+  set BinariesDeploymentMode=manual
+  set DeployDoc=0
 )
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in argument interpretation." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
@@ -93,7 +93,7 @@ if %IsSourcesIncluded% NEQ 0 (
   set DocumentationBaseDir=generated
 )
 
-set ConfigurationFileName=%ConfigurationSubdir%%ConfigurationID%%ConfigurationExtension%
+Sset ConfigurationFileName=%ConfigurationSubdir%%ConfigurationID%%ConfigurationExtension%
 set ConfigurationFilePath=%ScriptDir%%ConfigurationFileName%
 set DocumentationPath=%ScriptDir%%DocumentationBaseDir%\%ConfigurationID%
 set DocumentationIndexPath=%DocumentationPath%\html\index.html
@@ -127,7 +127,7 @@ rem call "%ScriptDir%SettingsSpecific.bat"
 
 
 :Finalize
-if %ERRORLEVEL% NEQ 0 (
+IF %ERRORLEVEL% NEQ 0 (
   echo.
   echo An ERROR occurred in %~n0%~x0:
   echo   ERRORLEVEL = %ERRORLEVEL%
