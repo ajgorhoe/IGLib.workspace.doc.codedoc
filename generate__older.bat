@@ -1,9 +1,14 @@
 
 REM Older generation code is stored here for reference.
-REM This was saved before merging modifications drom 2015 and later, used in
-REM documentation for some freelance projects (IG) whose code had to be separated
+REM This was saved before merging some additions from 2015 and later, used in
+REM documentation for some freelance projects (IG) whose code was separated
 REM from IGLib.
-REM WARNING: DO NOT MODIFY this file. It can be deleted when no longer needed.
+REM WARNING: DO NOT MODIFY this file. It is recommended to keep tge file as
+REM a reference for projects tgat would prefer simpler code documentation 
+REM scripts.
+
+
+
 
 set docname=%1
 
@@ -16,7 +21,7 @@ time /T
 
 echo 
 echo 
-echo NEW GENERATION SCRIPT.
+echo SIMPLE GENERATION SCRIPT.
 echo 
 echo 
 
