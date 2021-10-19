@@ -1,4 +1,8 @@
 @echo off 
+
+rem WARNING: This script is currently not in use, but is kept in repository
+rem for eventual later use when CI is set up on the source control service.
+
 rem More elaborated inference of binaries path, can be optionally included
 rem in settings script.
 
