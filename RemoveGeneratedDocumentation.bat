@@ -20,6 +20,11 @@ rd /s /q "%~dp0\*"
 echo   ... done.
 
 
+echo Removing specific directory - generated/teest/ :
+  echo   rd /s /q "%~dp0\test\"
+echo   ... done.
+
+
 :Finalize
 IF %ERRORLEVEL% NEQ 0 (
   echo.
