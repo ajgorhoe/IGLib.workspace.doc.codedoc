@@ -20,8 +20,8 @@ echo Removing code documentation from generated/ ...
 echo Directories to be removed:
 FOR /D %%d IN ("%~dp0\generated\*") DO echo   "%%d" 
 echo Executing:
-echo FOR /D %%d IN ("%~dp0\generated\*") DO rmdir /d /q "%%d" 
-
+echo   FOR /D %%d IN ("%~dp0\generated\*") DO rmdir /s /q "%%d" 
+FOR /D %%d IN ("%~dp0\generated\*") DO rmdir /s /q "%%d" 
 echo   ... removal from generated/ done.
 echo.
 
