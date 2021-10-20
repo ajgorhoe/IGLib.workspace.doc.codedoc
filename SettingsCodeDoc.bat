@@ -59,7 +59,7 @@ IF %RunWithinCiBuild% NEQ 0 (
 
 if %ERRORLEVEL% NEQ 0 (if not defined ErrorMessage (set ErrorMessage="Error in argument interpretation." & echo. & echo FATAL ERROR: %ErrorMessage% & goto Finalize))
 
-set BinariesContainingPathManual=%ScriptDir%..\..\codedoc_resources_manual
+set BinariesContainingPathManual=%ScriptDir%..\manual\codedoc_resources_manual
 set BinariesContainingPathSharedDir=%ScriptDir%..\..\codedoc_resources_shareddir
 set DoxygenVersionNuGet=1.8.14
 set GraphvizVersionNuGet=2.38.0.2
