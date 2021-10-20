@@ -13,6 +13,13 @@ rem Set some script related variables.
 set ScriptDir=%~dp0
 SET InitialDir=%CD%
 
+echo Removing code documentation from generated/ ...
+echo Executing:
+echo   rd /s /q "%~dp0\*"
+rd /s /q "%~dp0\*"
+echo   ... done.
+
+
 :Finalize
 IF %ERRORLEVEL% NEQ 0 (
   echo.
