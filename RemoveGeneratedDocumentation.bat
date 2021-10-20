@@ -13,12 +13,11 @@ rem Set some script related variables.
 set ScriptDir=%~dp0
 SET InitialDir=%CD%
 
-rem FOR /D %%p IN ("%~dp0\generated\*") DO rmdir "%%p" /s /q
 
 echo.
 echo Removing code documentation from generated/ ...
-echo Directories to be removed:
-FOR /D %%d IN ("%~dp0\generated\*") DO echo   "%%d" 
+rem echo Directories to be removed:
+rem FOR /D %%d IN ("%~dp0\generated\*") DO echo   "%%d" 
 echo Executing:
 echo   FOR /D %%d IN ("%~dp0\generated\*") DO rmdir /s /q "%%d" 
 FOR /D %%d IN ("%~dp0\generated\*") DO rmdir /s /q "%%d" 
@@ -26,18 +25,15 @@ echo   ... removal from generated/ done.
 echo.
 
 
-REM echo Removing code documentation from generated/ ...
-REM echo Executing:
-REM echo   rd /s /q "%~dp0\generated\te*\"
-REM rd /s /q "%~dp0\*"
-REM echo   ... done.
-
-
-echo Removing specific directory - generated/teest/ :
-echo   rd /s /q "%~dp0\generated\test"
-echo EXCLUDED.
-rem rd /s /q "%~dp0\generated\test"
-echo   ... done.
+echo.
+echo Removing code documentation from generated_with_sources/ ...
+rem echo Directories to be removed:
+rem FOR /D %%d IN ("%~dp0\generated\*") DO echo   "%%d" 
+echo Executing:
+echo   FOR /D %%d IN ("%~dp0\generated_with_sources\*") DO rmdir /s /q "%%d" 
+FOR /D %%d IN ("%~dp0\generated_with_sources\*") DO rmdir /s /q "%%d" 
+echo   ... removal from generated_with_sources/ done.
+echo.
 
 
 :Finalize
