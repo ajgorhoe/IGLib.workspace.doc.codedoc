@@ -25,7 +25,7 @@ echo.
 if %OldGenerationMode% NEQ 0 (
   rem Old way of creating code dovumentation:
   echo.
-  echo Generating code documentation rhe old way:
+  echo Generating code documentation the old way:
   echo.
   measuretime generate.bat %ConfigurationID%
   goto finalize
