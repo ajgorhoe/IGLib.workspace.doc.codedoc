@@ -4,7 +4,7 @@ rem This script updates a specific IGLib's module by cloning its Git
 rem repository (if necessary), and updating it to the current state.
 
 rem Bootstrap scripting such that update scripts are available:
-set BootStrapScripting=%~dp0\..\bootstrappingscripts\BootStrapScripting.bat
+set BootStrapScripting=%~dp0\..\..\bootstrappingscripts\BootStrapScripting.bat
 echo.
 echo SCRIPT: BootStrapScripting: "%BootStrapScripting%"
 echo.

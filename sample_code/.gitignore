@@ -2,3 +2,9 @@
 /IGLibEventAggregator/.git
 /IGLibEventAggregator/.git1
 /IGLibEventAggregator/.git*
+
+# IGLibCore may be checked out to ensure the sample code for test code documentation build,
+# but this is not necessary for building test documentation. If you need the project then
+# just run the script UpdateModule_IGLibEventAggregator.bat.
+/IGLibCore
+
