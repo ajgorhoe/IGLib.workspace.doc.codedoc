@@ -7,3 +7,6 @@
 /generate_COPY.bat
 /GenerateCodeDoc_COPY.bat
 /generate_test_COPY.bat
+.vs
+obj
+bin
