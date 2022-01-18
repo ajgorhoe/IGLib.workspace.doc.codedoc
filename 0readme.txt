@@ -6,7 +6,9 @@ Reported when parsing the file:
   ../../ThirdParty/vcpkg/downloads/tools/perl/5.32.1.1/perl/lib/CORE/charclass_invlists.h
 Issue already reported here: https://github.com/doxygen/doxygen/issues/8564
 This may have been solved in a version that is later than the one currently 
-used (1.8.17), suppossedly in 1.9.2 - please check.
+used (1.8.17), suppossedly in 1.9.2 (current v. 1.9.3) - please check.
+Update: Version 1.9.3 installed (branch RT_master of codedoc_resources repo),
+this did not solve the problem. To try excluding the file.
 
 
 WARNING - IMPORTANT - running doxygen directly:
