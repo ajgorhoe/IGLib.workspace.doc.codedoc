@@ -11,15 +11,12 @@ echo
 
 md generated
 
-CALL .\generate_iglib.bat
-CALL .\generate_iglib_withsources.bat
-CALL .\generate_pythontools.bat
+CALL .\generate_lgm.bat
+CALL .\generate_lgm_with_sources.bat
 
-CALL .\generate_develop.bat
-CALL .\generate_develop_nafems.bat
-CALL .\generate_guest_marko_petek.bat
-CALL .\generate_NeurApp.bat
-CALL .\generate_shell.bat
+CALL .\generate_lgmall.bat
+CALL .\generate_lgmall_with_sources.bat
+
 
 CALL .\generate_iglib.bat
 
