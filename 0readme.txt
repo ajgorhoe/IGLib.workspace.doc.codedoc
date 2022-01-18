@@ -1,4 +1,14 @@
 
+The ...RT branches:
+Error reported: "input buffer overflow, can't enlarge buffer because scanner us
+es REJECT"
+Reported when parsing the file:
+  ../../ThirdParty/vcpkg/downloads/tools/perl/5.32.1.1/perl/lib/CORE/charclass_invlists.h
+Issue already reported here: https://github.com/doxygen/doxygen/issues/8564
+This may have been solved in a version that is later than the one currently 
+used (1.8.17), suppossedly in 1.9.2 - please check.
+
+
 WARNING - IMPORTANT - running doxygen directly:
   When running Doxygen directly (not through scripts and passing only the
   configuration file), directories where generated documentation is put
