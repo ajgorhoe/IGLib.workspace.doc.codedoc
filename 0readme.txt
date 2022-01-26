@@ -9,6 +9,10 @@ This may have been solved in a version that is later than the one currently
 used (1.8.17), suppossedly in 1.9.2 (current v. 1.9.3) - please check.
 Update: Version 1.9.3 installed (branch RT_master of codedoc_resources repo),
 this did not solve the problem. To try excluding the file.
+Update: excluding the file that is problematic solves the issue and the 
+above error is not reported any more. However, Doxigen still cannot 
+successfully generate the extended documentation (including dependencies,
+configurations lgmall and lgmall_with_sources).
 
 
 WARNING - IMPORTANT - running doxygen directly:
