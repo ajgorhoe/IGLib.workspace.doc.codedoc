@@ -30,8 +30,8 @@ echo.
 rem Parameters for the update:
 set ModuleDirRelative=IGLibScripts
 set CheckoutBranch=master
-set RepositoryAddress=https://github.com/ajgorhoe/IGLib.modules.IGLibScripts.git
-set RepositoryAddressSecondary=https://ajgorhoe@bitbucket.org/ajgorhoe/iglib.modules.iglibscripts.git
+set RepositoryAddress=https://git.revtec-systems.com/scm/misc/iglibscripts.git
+set RepositoryAddressSecondary=https://github.com/ajgorhoe/IGLib.modules.IGLibScripts.git
 set RepositoryAddressLocal=d:\backup_sync\bk_code\git\ig\misc\iglib_modules\IGLibScripts
 set Remote=origin
 set RemoteSecondary=originSecondary
