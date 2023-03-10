@@ -1,4 +1,6 @@
 
+Starting another documentaion here - for g3sim.
+
 WARNING - IMPORTANT - running doxygen directly:
   When running Doxygen directly (not through scripts and passing only the
   configuration file), directories where generated documentation is put
