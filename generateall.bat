@@ -11,17 +11,11 @@ echo
 
 md generated
 
-CALL .\generate_iglib.bat
-CALL .\generate_iglib_withsources.bat
-CALL .\generate_pythontools.bat
+CALL .\generate_g3sim.bat
+CALL .\generate_g3simall.bat
+CALL .\generate_g3sim_withsources.bat
+CALL .\generate_g3simall_withsources.bat
 
-CALL .\generate_develop.bat
-CALL .\generate_develop_nafems.bat
-CALL .\generate_guest_marko_petek.bat
-CALL .\generate_NeurApp.bat
-CALL .\generate_shell.bat
-
-CALL .\generate_iglib.bat
 
 
 time /T
