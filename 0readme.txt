@@ -28,6 +28,6 @@ configuration tool (doxygen graphical front end) named doxywizard, e.g.
 
   $ doxyvizard iglib.dox
 
-Use if doxywizard is not very recommended, however, especially not to correct  path information.
+Use of doxywizard is not very recommended, however, especially not to correct  path information.
 
 Note that the $ sign only indicates command shell's prompt and is not part of  what you type in. 
