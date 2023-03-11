@@ -11,6 +11,8 @@ echo
 
 md generated
 
+CALL .\generate_test.bat
+CALL .\generate_test_with_sources.bat
 CALL .\generate_g3sim.bat
 CALL .\generate_g3simall.bat
 CALL .\generate_g3sim_with_sources.bat
