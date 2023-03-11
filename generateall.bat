@@ -13,8 +13,8 @@ md generated
 
 CALL .\generate_g3sim.bat
 CALL .\generate_g3simall.bat
-CALL .\generate_g3sim_withsources.bat
-CALL .\generate_g3simall_withsources.bat
+CALL .\generate_g3sim_with_sources.bat
+CALL .\generate_g3simall_with_sources.bat
 
 
 
