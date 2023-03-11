@@ -4,7 +4,7 @@ rem Create local context to avoid side effects:
 setlocal
 
 rem Define configuration parameters for this specific script:
-set ConfigurationID=iglib
+set ConfigurationID=g3sim
 set IsSourcesIncluded=0
 set ConfigurationSubdir=.\
 
