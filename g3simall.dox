@@ -766,17 +766,9 @@ WARN_LOGFILE           = igliball.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "../../TSS_G3_simulator" \
-                         "../../TSS_LEIO_simulator" \
-                         "../../TSS_Monitor" \
-                         "../../TSS_Monitor_THS" \
-                         "../../TSS_PCMS_simulator" \
-                         "../../TSS_POS_simulator" \
-                         "../../TSS_TRX_simulator" \
-                         "../../TSS_VMS_simulator" \
-                         "../../TSS_VMS_tester" \
-						 "../../application/psc"  \
-						 "../../psc_g3 simulator"  \
+INPUT                  = "../../MCon\devel" \
+                         "" \
+                         "" \
                          ""
 
 # This tag can be used to specify the character encoding of the source files
