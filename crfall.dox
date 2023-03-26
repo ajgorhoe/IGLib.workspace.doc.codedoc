@@ -38,19 +38,19 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "g3sim EXTENDED"
+PROJECT_NAME           = "crf EXTENDED"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.0.2
+PROJECT_NUMBER         = 1.1.1
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The g3 simulator EXTENDED."
+PROJECT_BRIEF          = "The crf samples and services, EXTENDED."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -766,17 +766,9 @@ WARN_LOGFILE           = igliball.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "../../TSS_G3_simulator" \
-                         "../../TSS_LEIO_simulator" \
-                         "../../TSS_Monitor" \
-                         "../../TSS_Monitor_THS" \
-                         "../../TSS_PCMS_simulator" \
-                         "../../TSS_POS_simulator" \
-                         "../../TSS_TRX_simulator" \
-                         "../../TSS_VMS_simulator" \
-                         "../../TSS_VMS_tester" \
-						 "../../application/psc"  \
-						 "../../psc_g3 simulator"  \
+INPUT                  = "../../CRF/samples" \
+                         "../../CRF/services" \
+                         "./bootstrappingscripts" \
                          ""
 
 # This tag can be used to specify the character encoding of the source files
@@ -797,7 +789,7 @@ INPUT_ENCODING         = UTF-8
 # *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
 # *.qsf, *.as and *.js.
 
-FILE_PATTERNS          = *.cs, *.c, *.cc, *.cxx, *.cpp, *.h, *.hh, *.hxx, *.hpp, *.h++, *.py
+FILE_PATTERNS          = *.cs, *.c, *.cc, *.cxx, *.cpp, *.h, *.hh, *.hxx, *.hpp, *.h++, *.py, *.rs
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
