@@ -1,0 +1,10 @@
+{
+  "name": "rabbitmq-node-tutorial",
+  "version": "1.0.0",
+  "description": "RabbitMQ amqplib tutorial ",
+  "dependencies": {
+    "amqplib": "latest",
+    "js-beautify": "^1.9.1",
+    "url-parse": ">=1.5.9"
+  }
+}
