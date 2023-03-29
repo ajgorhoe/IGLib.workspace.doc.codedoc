@@ -23,7 +23,7 @@ rem Reset the error level (by running an always successfull command):
 ver > nul
 
 rem Repository update parameters:
-set ModuleDirRelative=IGLibEventAggregator
+set ModuleDirRelative=rabbitmq-tutorials
 set CheckoutBranch=master
 set RepositoryAddress=https://github.com/rabbitmq/rabbitmq-tutorials.git
 rem Non-overridable:
