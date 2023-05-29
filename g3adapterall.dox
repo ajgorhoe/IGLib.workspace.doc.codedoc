@@ -805,7 +805,6 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "../../src/tests11" \
-                         "../../src/kapsch.crf.backofficeadapter.g3-au-m6s1.tests/obj" \
                          "../../src/kapsch.crf.backofficemock.g3-au-m6s1/obj" \
                          "../../src/GrpcClient/obj"
 
