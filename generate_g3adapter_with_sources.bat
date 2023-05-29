@@ -4,8 +4,8 @@ rem Create local context to avoid side effects:
 setlocal
 
 rem Define configuration parameters for this specific script:
-set ConfigurationID=mcon
-set IsSourcesIncluded=0
+set ConfigurationID=g3adapter_with_sources
+set IsSourcesIncluded=1
 set ConfigurationSubdir=.\
 
 
