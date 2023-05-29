@@ -804,7 +804,7 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                =  "../../MCon/devel" \
+EXCLUDE                =  "../../src/tests11" \
                          "../../src/kapsch.crf.backofficeadapter.g3-au-m6s1.tests" \
                          "../../src/kapsch.crf.backofficemock.g3-au-m6s1" \
                          "../../src/GrpcClient"
