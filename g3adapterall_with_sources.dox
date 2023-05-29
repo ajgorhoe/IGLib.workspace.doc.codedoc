@@ -38,7 +38,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "mCon - EXTENDED, with source files"
+PROJECT_NAME           = "G3 Adapter - EXTENDED, with source files"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 1.0.2
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The Management Console - EXTENDED, with SOURCE references."
+PROJECT_BRIEF          = "The G3 Adapter - EXTENDED, with SOURCE references."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -158,7 +158,7 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = "../../MCon"
+STRIP_FROM_PATH        = "../../src"
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -766,7 +766,7 @@ WARN_LOGFILE           = iglib_all_withsources.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "../../MCon/devel" \
+INPUT                  = "../../src" \
                          "" \
                          "" \
                          ""
@@ -804,10 +804,10 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-# EXCLUDE                =
-
-EXCLUDE                =  "../../MCon/devel/app/RSSSimulator"
-
+EXCLUDE                =  "../../src/tests11" \
+                         "../../src/kapsch.crf.backofficeadapter.g3-au-m6s1.tests/obj" \
+                         "../../src/kapsch.crf.backofficemock.g3-au-m6s1" \
+                         "../../src/GrpcClient/obj"
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
