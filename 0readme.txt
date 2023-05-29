@@ -1,5 +1,13 @@
 
-Starting another documentaion here - for g3sim.
+TO DO:
+Currently the generate_g3adapter.bat and generate_g3adapterall.bat generate 
+documentation with sources. This should be changed back.
+The generate_g3adapterall.bat is not generating graphical class hierarchy. Try
+to fix this, then also fix the scripts for generation with source files (the
+easiest way might be copying and changing files that work).
+
+
+Starting another documentaion here - for g3 adapter.
 
 WARNING - IMPORTANT - running doxygen directly:
   When running Doxygen directly (not through scripts and passing only the
