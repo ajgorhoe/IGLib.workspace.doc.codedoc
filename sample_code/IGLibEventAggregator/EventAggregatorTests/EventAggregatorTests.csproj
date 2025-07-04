@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+    <TargetFrameworks>net5.0;net48;net461;netstandard2.0</TargetFrameworks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>net5.0</TargetFramework>
+    -->
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IGLibCore\src\IGLib.Core\IGLib.Core.csproj" />
+    <ProjectReference Include="..\EventAggregator\EventAggregator.csproj" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <AssemblyName>EventAggregatorTests</AssemblyName>
+    <RootNamespace>IG.Lib.Events</RootNamespace>
+    <PackageId>EventAggregatorTests</PackageId>
+    <Authors>Igor Grešovnik</Authors>
+    <Company>Igor Grešovnik</Company>
+    <ProductName>IGLib_EventAggregatorTests</ProductName>
+    <Product>Investigative Generic Library (IGLib) - EventAggregatorTests</Product>
+    <Copyright>Copyright (c) Igor Grešovnik, 2008 - present.</Copyright>
+    <Description>Tests for IGLIb's EventAggregator.</Description>
+    
+    <PackageLicenseExpression>IGLib Binary Redistributable Licence</PackageLicenseExpression>
+    <PackageLicenseUrl>http://www2.arnes.si/%7Eljc3m2/igor/software/IGLibShellApp/License_IGShel.html</PackageLicenseUrl>
+    
+  </PropertyGroup>
+
+
+</Project>

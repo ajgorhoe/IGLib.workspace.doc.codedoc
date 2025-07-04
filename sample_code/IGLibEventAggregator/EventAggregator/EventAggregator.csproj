@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFrameworks>net8.0;net48;net461;netstandard2.0</TargetFrameworks>
+    -->
+    <TargetFrameworks>net8.0;net48;netstandard2.0</TargetFrameworks>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>EventAggregator</AssemblyName>
+    <PackageId>EventAggregator_Standard</PackageId>
+    <RootNamespace>IG.Lib.Events</RootNamespace>
+    <Version>1.9.1</Version>
+    <AssemblyVersion>1.9.1</AssemblyVersion>
+    <FileVersion>1.9.1</FileVersion>
+    <Authors>Igor Grešovnik</Authors>
+    <Company>Igor Grešovnik</Company>
+    <ProductName>IGLib_EventAggregator</ProductName>
+    <Product>Investigative Generic Library (IGLib) - EventAggregator</Product>
+    <Copyright>Copyright (c) Igor Grešovnik, 2008 - present.</Copyright>
+    <Description>Generic event aggregator utility for event driven applications to facilitate decoupling of dependencies.</Description>
+    
+    <PackageLicenseExpression>IGLib Binary Redistributable Licence</PackageLicenseExpression>
+    <PackageLicenseUrl>http://www2.arnes.si/%7Eljc3m2/igor/software/IGLibShellApp/License_IGShel.html</PackageLicenseUrl>
+    
+</PropertyGroup>
+
+</Project>
