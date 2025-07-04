@@ -2,3 +2,5 @@
 /IGLibEventAggregator/.git
 /IGLibEventAggregator/.git1
 /IGLibEventAggregator/.git*
+/IGLibEventAggregator/EventAggregator/obj/
+/IGLibEventAggregator/EventAggregatorTests/obj/
