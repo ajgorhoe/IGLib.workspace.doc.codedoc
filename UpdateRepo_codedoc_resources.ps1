@@ -29,13 +29,14 @@ $UpdatingScriptPath = "./UpdateOrCloneRepository.ps1"
 # Define parameter variables for UpdateOrCloneRepository.ps1
 #    in the same order as that script's parameters:
 
-$global:CurrentRepo_Directory = "../IGLibScripting/"
-$global:CurrentRepo_Ref = "main"
-$global:CurrentRepo_Address = "https://github.com/ajgorhoe/IGLib.modules.IGLibScripting.git"
+$global:CurrentRepo_Directory = "../codedoc_resources/"
+$global:CurrentRepo_Ref = "master"
+$global:CurrentRepo_Address = "https://github.com/ajgorhoe/IGLib.workspace.codedoc_resources.git"
 $global:CurrentRepo_Remote = "origin"
 $global:CurrentRepo_AddressSecondary = $null
 $global:CurrentRepo_RemoteSecondary = $null
-$global:CurrentRepo_AddressTertiary = "d:/backup_sync/bk_code/git/ig/misc/iglib_modules/IGLibScripting"
+$global:CurrentRepo_AddressTertiary = $null
+# "d:/backup_sync/bk_code/git/ig/misc/iglib_modules/IGLibScripting"
 $global:CurrentRepo_RemoteTertiary = "local"
 $global:CurrentRepo_ThrowOnErrors = $false
 
