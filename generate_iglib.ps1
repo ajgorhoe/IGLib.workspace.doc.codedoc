@@ -30,35 +30,19 @@
 #>
 
 
-param (
-    [string]$ConfigurationId,
-    [switch]$IsSourcesIncluded,
-    [switch]$LaunchDoc
-)
-
-Write-Host ""
-Write-Host "============================================================"
-Write-Host "GenerateCodeDoc.ps1:"
-
 # Prefix used for setting/retrieving global variables
-$ParameterGlobalVariablePrefix = "CodeDoc_"
+$ParameterGlobalVariablePrefix = "CurrentRepo_"
 
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
 
 
-Write-Host "-----------------------------------------"
-Write-Host "Script parameters:"
-Write-Host "  ConfigurationId:   $ConfigurationId"
-Write-Host "  IsSourcesIncluded: $IsSourcesIncluded"
-Write-Host "  LaunchDoc:         $LaunchDoc"
-Write-Host "Global variables:"
-Write-Host "-----------------------------------------"
+$global:CodeDoc_ConfigurationId = "iglib"
+$global:CodeDoc_IsSourcesIncluded = $null
 
 
 
-Write-Host "-------------------------------------------------------------"
-Write-Host ""
+
 
 
 
