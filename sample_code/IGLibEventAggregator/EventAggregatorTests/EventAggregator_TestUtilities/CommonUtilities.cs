@@ -10,7 +10,7 @@ namespace IG.Tests.Events
 {
 
     /// <summary>Base class for classes whose objects have a unique application-wide ID.</summary>
-    public abstract class GloballyIdentifiableTestUtil: GloballyIdentifiableBase, IGloballyIdentifiable
+    public abstract class GloballyIdentifiableTestUtil : GloballyIdentifiableBase, IGloballyIdentifiable
     {
 
         /// <summary>Used for locking internal resources by classes that need certain thread safety properties.</summary>
@@ -27,41 +27,39 @@ namespace IG.Tests.Events
     }
 
 
-        public class TestEventInfo: GloballyIdentifiableTestUtil, IGloballyIdentifiable
-        {
+    public class TestEventInfo : GloballyIdentifiableTestUtil, IGloballyIdentifiable
+    {
 
         public TestEventInfo(object sender, object eventArgs)
         {
             SenderObject = sender;
-            EventArgsObject = eventArgs; 
+            EventArgsObject = eventArgs;
         }
 
         public object SenderObject { get; protected set; }
 
         public object EventArgsObject { get; protected set; }
 
-        public ITestPublisher SenderTestable {
-            get {
-                return SenderObject == null? null: SenderObject as ITestPublisher;
+        public ITestPublisher SenderTestable
+        {
+            get
+            {
+                return SenderObject == null ? null : SenderObject as ITestPublisher;
             }
         }
 
-        public ITestEventData EventArgsTestable {
+        public ITestEventData EventArgsTestable
+        {
             get
             {
-                return EventArgsObject == null? null: EventArgsObject as ITestEventData;
-            } 
+                return EventArgsObject == null ? null : EventArgsObject as ITestEventData;
+            }
         }
 
         /// <summary>Returns <see cref="IGloballyIdentifiable.ObjectId"/> of the event's data, 
         /// or -1 if event's data does not exist.</summary>
-        public int DataId { get { return EventArgsTestable == null ? -1 : EventArgsTestable.ObjectId;  } }
+        public int DataId { get { return EventArgsTestable == null ? -1 : EventArgsTestable.ObjectId; } }
 
     }
-
-
-
-
-
 
 }

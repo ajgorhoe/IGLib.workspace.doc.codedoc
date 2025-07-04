@@ -2,12 +2,10 @@
 
   <PropertyGroup>
     <!--
-    <TargetFramework>net5.0</TargetFramework>
-    <TargetFrameworks>net5.0;net48;net461;netstandard2.0</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net8.0;net48;net461;netstandard2.0</TargetFrameworks>
     -->
-    <TargetFrameworks>net5.0;net48;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net48;netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
   </PropertyGroup>
 
@@ -29,9 +27,5 @@
     <PackageLicenseUrl>http://www2.arnes.si/%7Eljc3m2/igor/software/IGLibShellApp/License_IGShel.html</PackageLicenseUrl>
     
 </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\IGLibCore\src\IGLibCore.csproj" />
-  </ItemGroup>
 
 </Project>

@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <!--
-    <TargetFramework>net5.0</TargetFramework>
     <TargetFrameworks>net5.0;net48;net461;netstandard2.0</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TargetFramework>net5.0</TargetFramework>
     -->
-    <TargetFrameworks>net5.0;net48</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -20,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IGLibCore\src\IGLibCore.csproj" />
+    <ProjectReference Include="..\..\IGLibCore\src\IGLib.Core\IGLib.Core.csproj" />
     <ProjectReference Include="..\EventAggregator\EventAggregator.csproj" />
   </ItemGroup>
   
