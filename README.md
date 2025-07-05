@@ -62,7 +62,7 @@ For more information, see the documentation from IGLib base repository located a
 
 ## Miscellaneous Remarks
 
-### Important - Running doxygen directly
+### Important - Running Doxygen directly
 
 When running Doxygen directly (not through scripts and passing only the configuration file), directories where generated documentation is put must already exist (Doxygen will not create it and will exit with unrelated error message if the directory does not exist).
 
