@@ -108,9 +108,8 @@ if (-not ($env:PATH -split [System.IO.Path]::PathSeparator | ForEach-Object { $_
 }
 Write-Host "New path: $env:PATH"
 
-
 Write-Host "Creating code documentation for configuration `"$ConfigurationId`"..."
-
+& $doxygenExe $doxygenConfig
 
 Write-Host ""
 Write-Host "Code documentation completed for `"$ConfigurationId`"."
