@@ -29,12 +29,13 @@
 
 #>
 
-
 param (
     [string]$ConfigurationId,
     [switch]$IsSourcesIncluded,
+    [switch]$ForceUpdates, # = $False,
     [switch]$LaunchDoc
 )
+
 function Get-CanonicalAbsolutePath {
     param([string]$Path)
     if ([System.IO.Path]::IsPathRooted($Path)) {
@@ -66,6 +67,12 @@ $binariesDirGit =  (Get-CanonicalAbsolutePath $binariesDirGit)
 $doxygenExe = (Join-Path $binariesDir "bin/doxygen/doxygen.exe")
 $graphvizDir = (Join-Path $binariesDir "bin/graphviz/bin/")
 $doxygenConfig = (Join-Path $scriptDir ($ConfigurationId + ".dox"))
+$docDir = "generated"
+if ($IsSourcesIncluded) {
+    $docDir = generated_with_sources
+}
+# Calculate path to the index.html of the generated documentation:
+$docFile = (Join-Path $scriptDir ($docDir + "/" + $ConfigurationId + "/html/index.html"))
 
 Write-Host "-----------------------------------------"
 Write-Host "Script parameters:"
@@ -84,17 +91,24 @@ Write-Host "  doxygenExe        : $doxygenExe"
 Write-Host "  graphvizDir       : $graphvizDir"
 Write-Host ""
 Write-Host "  doxygenConfig     : $doxygenConfig"
+Write-Host "  docFile           : $docFile"
 Write-Host "-----------------------------------------"
+
 Write-Host ""
-
-
 $doUpdateBinaryDirectory = $false
+# Check wheter the cloned repository with binaries exists, to decide whether
+# we need to clone / update the repository:
 if (Test-Path -Path $binariesDirGit -PathType Container) {
     # Code to run if the directory exists
-    Write-Host "Binaries directory exists, update skipped."
+    if ($ForceUpdates) {
+        Write-Host "Binaries directory exists, but binaries repo is forced.`n`n"
+        $doUpdateBinaryDirectory = $true
+    } else {
+        Write-Host "Binaries directory exists, updating/cloning will be skipped.`n"
+    }
 } else {
     # Code to run if it does not exist
-    Write-Host "Binaries directory does NOT exist."
+    Write-Host "Binaries directory does NOT exist and will be cloned.`n`n"
     $doUpdateBinaryDirectory = $true
 }
 if ($doUpdateBinaryDirectory)
@@ -112,6 +126,17 @@ Write-Host ""
 
 Write-Host "Creating code documentation for configuration `"$ConfigurationId`"..."
 & $doxygenExe $doxygenConfig
+
+
+# If specified by parameters, open the generated documentation's index.html
+# in default browser:
+if ($LaunchDoc) {
+    Write-Host "`nLaunching the generated documentation ..."
+    Write-Host "Path: $docFile`n"
+    Start-Process $docFile     # should work cross-platform
+    # & $docFile    # not cross-platform (need to make file executable on Linux)
+}
+
 
 Write-Host ""
 Write-Host "Code documentation completed for `"$ConfigurationId`"."
