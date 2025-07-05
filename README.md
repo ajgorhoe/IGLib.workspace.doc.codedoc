@@ -1,18 +1,65 @@
 # About this Repository
 
-Copyright (c) Igor Grešovnik
+This repository contains scripts for *generating **code documentation*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other code projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)).
 
-This repository is part of the Investigative Generic Library (IGLib).
+Doxygen and other binaries are automatically downloaded (by cloning a dedicated repository) when documentation is generated via scripts. Currently, documentation can only be generated on Windows because the binaries are provided only for this OS. This can be easily fixed by providing binaries for other systems and putting them on the same relative location. Currently, the cross-platform scripts don't use system's installation of Doxygen and GraphViz (the older batch scripts have this possibility), but this can be fixed, too.
 
-See license for terms of use. If no license file is included then this repository should not be copied or distributed.
+**Contents**:
+
+* [Use with Legacy IGLib]
+* [Use with new IGLib]
+* [Customize for Other Projects]
+
+## Use with Legacy IGLib
 
 In order to use this repository, clone it by using the IGLib container repository located at:
 
 > *https://github.com/ajgorhoe/iglibcontainer.git*
 
-See the readme file of the above container repository for information about how to properly clone and use IGLib repositories.
+After cloning the repository, navigate to the **workspace/base/** subdirectory and run the PowerShell script
+
+`UpdateRepoGroup_Extended.ps1`
+
+without parameters. This will clone all the repositories needed to create code documentation. Next, navigate to the **workspace/base/** subdirectory and run the PowerShell script
+
+`UpdateRepo_codedoc.ps1`
+
+(also without parameters). This will clone the `codedoc` direectory that contains the generation scripts and other necessary ingredients. Navigate to the **workspace/codedoc/** subdirectory and run one of the generations scripts, for example
+
+`generate_iglib.ps1`
+
+After running this script, a basic IGLib code documentation should be generated in *workspace/codedoc/**, in the following subdirectory:
+
+`generated/iglib/html/`
+
+Open the `index.html` in order to browse the documentation. Its complete path relative to the `codedoc` clone directory should be:
+
+> .../workspace/codedoc/generated/iglib/html/index.html
+
+You can also open the
+
+> ...//workspace/codedoc/code_documentation.html
+
+file, which contains links to various flavors of the generated documentation. Links will work only after the documentation is generated. Normally, documentation should also be launched in a browser after generation.
+
+There are **different flavors of documentation** for the same code project, which you can generate by running different scripts:
+
+* `generate_iglib.ps1` creates the most basic IGLib documentation.
+* `generate_iglib_all.ps1` creates basic documentation, but include extended set of code not included in the previous configuration, such as tests and some external libraries.
+* `generate_iglib_with_sources.ps1` includes source code in the generated documentation. functions, classes, properties, etc., are linked to their definition of syntax-highlighted source code represented in HTML. Conversely, entities in code are back-linked to their documentation, which is a truly powerful feature that makes navigation easy.
+* `generate_igliball_with_sources.ps1` creates documentation for extended set of sources, with source code included.
+
+For additional information, you can also check the readme file of the above container repository for information about how to properly clone and use IGLib repositories.
 
 For more information, see the documentation from IGLib base repository located at:
 
 > *https://github.com/ajgorhoe/IGLib.workspace.base.iglib.git*
 
+## Use with new IGLib
+
+## Customize for Other Projects
+
+## License and Terms of Use
+
+Copyright (c) Igor Grešovnik
+This repository is part of the [*Investigative Generic Library (**IGLib**)*](). See [license](./LICENSE.md) for terms of use.
