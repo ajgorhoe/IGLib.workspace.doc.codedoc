@@ -59,9 +59,13 @@ $scriptDir = Split-Path $scriptPath -Parent
 $updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources.ps1")
 $binariesDir = (Join-Path $scriptDir "../codedoc_resources/")
 $binariesDirGit = (Join-Path $binariesDir ".git/")
-# Canonize the above paths:
+# Canonize the above two paths:
 $binariesDir = (Get-CanonicalAbsolutePath $binariesDir)
 $binariesDirGit =  (Get-CanonicalAbsolutePath $binariesDirGit)
+# Get executables for execution of Doxygen and for setting path do GraphViz: 
+$doxygenExe = (Join-Path $binariesDir "bin/doxygen/doxygen.exe")
+$graphvizDir = (Join-Path $binariesDir "bin/graphviz/bin/")
+$doxygenConfig = (Join-Path $scriptDir ($ConfigurationId + ".dox"))
 
 Write-Host "-----------------------------------------"
 Write-Host "Script parameters:"
@@ -74,16 +78,38 @@ Write-Host "Derived parameters:"
 Write-Host "  scriptPath:   $scriptPath"
 Write-Host "  scriptDir:    $scriptDir"
 Write-Host "  updateBinariesScript: $updateBinariesScript"
-Write-Host "  binariesDir         : $binariesDir"
-Write-Host "  binariesDirGit      : $binariesDirGit"
+Write-Host "  binariesDir       : $binariesDir"
+Write-Host "  binariesDirGit    : $binariesDirGit"
+Write-Host "  doxygenExe        : $doxygenExe"
+Write-Host "  graphvizDir       : $graphvizDir"
+Write-Host ""
+Write-Host "  doxygenConfig     : $doxygenConfig"
 Write-Host "-----------------------------------------"
 Write-Host ""
 
-Write-Host "Updating binaries repo (`"UpdateRepo_codedoc_resources.ps1`")..."
+
+$doUpdateBinaryDirectory = $false
+if (Test-Path -Path $binariesDirGit -PathType Container) {
+    # Code to run if the directory exists
+    Write-Host "Binaries directory exists, update skipped."
+} else {
+    # Code to run if it does not exist
+    Write-Host "Binaries directory does NOT exist."
+    $doUpdateBinaryDirectory = $true
+}
+if ($doUpdateBinaryDirectory)
+{
+    Write-Host "Updating binaries repo (`"UpdateRepo_codedoc_resources.ps1`")..."
+    & $updateBinariesScript
+}
+Write-Host "Adding Graphviz to the PATH environment variable..."
+if (-not ($env:PATH -split [System.IO.Path]::PathSeparator | ForEach-Object { $_.Trim() } | Where-Object { $_ -eq $graphvizDir })) {
+    $env:PATH = "$graphvizDir$([System.IO.Path]::PathSeparator)$env:PATH"
+}
+Write-Host "New path: $env:PATH"
 
 
 Write-Host "Creating code documentation for configuration `"$ConfigurationId`"..."
-# & $updateBinariesScript
 
 
 Write-Host ""
