@@ -35,6 +35,9 @@ $ParameterGlobalVariablePrefix = "CurrentRepo_"
 
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
+$generationScript = (Join-Path $scriptDir "GenerateCodeDoc.ps1")
+
+& $generationScript -ConfigurationId "iglib"  -LaunchDoc
 
 
 $global:CodeDoc_ConfigurationId = "iglib"

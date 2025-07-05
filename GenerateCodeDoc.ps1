@@ -106,7 +106,9 @@ Write-Host "Adding Graphviz to the PATH environment variable..."
 if (-not ($env:PATH -split [System.IO.Path]::PathSeparator | ForEach-Object { $_.Trim() } | Where-Object { $_ -eq $graphvizDir })) {
     $env:PATH = "$graphvizDir$([System.IO.Path]::PathSeparator)$env:PATH"
 }
+Write-Host ""
 Write-Host "New path: $env:PATH"
+Write-Host ""
 
 Write-Host "Creating code documentation for configuration `"$ConfigurationId`"..."
 & $doxygenExe $doxygenConfig
