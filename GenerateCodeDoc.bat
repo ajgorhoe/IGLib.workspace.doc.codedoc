@@ -36,7 +36,7 @@ if not exist "%BinariesContainingPathRepository%\.git\objects" (
   echo Updating contents using git pull...
   
   rem TO DO
-  rem There should be possibility ti tell which branch or commit to chek out.
+  rem There should be possibility to tell which branch or commit to chek out.
   rem This block should also execute when clone is performed in condidional 
   rem block, therefore this block shoulld be moved out of ELSE.
   
