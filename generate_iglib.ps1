@@ -1,52 +1,40 @@
 <#
 .SYNOPSIS
-    Script file for generating code documentation for a specific 
-	configuration.
-
-.NOTES
-    Copyright © Igor Grešovnik.
-    Part of IGLib: https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc
-	License: https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md
-
-.DESCRIPTION
-    This script defines a function `UpdateOrCloneRepository` and various helper functions
-    that clone or update a Git repository, optionally resolving parameters from global variables.
-    It supports multiple remotes, references (branch/tag/commit), error handling, and more.
-
-    When run with `-Execute`, the script calls `UpdateOrCloneRepository` with the
-    specified or inferred parameters. When run with `-DefaultFromVars`,
-    unspecified parameters are automatically pulled from global variables prefixed with 'CurrentRepo_'.
-
-.PARAMETER Directory
-    The local directory.
-
-
-.EXAMPLE
-    .\UpdateOrCloneRepository.ps1 -Directory "C:\Repos\Example" -Address "https://github.com/foo/bar.git" -Execute
-
-    Clones or updates the repo in C:\Repos\Example, using the default remote name 'origin',
-    and prints status messages to the console.
+    Script for generating code documentation (configuration ID "iglib"; 
+    file iglib.dox - the LEGACY IGLib) with basic source code included, and NO
+    sources included.
+    Except ConfigurationId and IsSourcesIncluded, which are fixed, this script
+    has the same parameters as GenerateCodeDoc.ps1, which it calls to do the 
+    work. Overriding their default values changes the behavior of code
+    generation, but in many use cases this is not necessary and the script can
+    be called without parameters.
+    The LaunchDoc parameter  should be set to false wheen this script is called
+    in CI/CD pipelines. If newer binaries are provided in the codedoc_resources
+    repository, call this script with ForceUpdates set to true once, or just
+    execute the UpdateRepo_codedoc_resources.ps1 script.
 
 #>
 
+# Parameters for GenerateCodeDoc.ps1 that can be modified:
+param (
+    [bool]$ForceUpdates = $false,
+    [bool]$LaunchDoc = $true
+)
 
-# Prefix used for setting/retrieving global variables
-$ParameterGlobalVariablePrefix = "CurrentRepo_"
+# Fixed parameters for calling GenerateCodeDoc.ps1:  # this block must come after param(...)
+$ConfigurationId = "iglib"
+$IsSourcesIncluded = $false
 
+########################### Fixed part of the scrippt:
+
+# Get the script path to determine the path of the documentation generating
+# script:
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
 $generationScript = (Join-Path $scriptDir "GenerateCodeDoc.ps1")
 
-& $generationScript -ConfigurationId "iglib"  -LaunchDoc
-
-
-$global:CodeDoc_ConfigurationId = "iglib"
-$global:CodeDoc_IsSourcesIncluded = $null
-
-
-
-
-
-
-
-
+# Call GenerateCodeDoc.ps1 to do the job:
+& $generationScript -ConfigurationId $ConfigurationId    `
+    -IsSourcesIncluded $IsSourcesIncluded `
+    -LaunchDoc $LaunchDoc  `
+    $ForceUpdates $ForceUpdates  
