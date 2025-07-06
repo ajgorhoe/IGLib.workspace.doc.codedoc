@@ -120,6 +120,7 @@ Write-Host "-----------------------------------------"
 Write-Host "Script parameters:"
 Write-Host "  ConfigurationId:   $ConfigurationId"
 Write-Host "  IsSourcesIncluded: $IsSourcesIncluded"
+Write-Host "  ForceUpdates:      $ForceUpdates"
 Write-Host "  LaunchDoc:         $LaunchDoc"
 Write-Host "Global variables:"
 
