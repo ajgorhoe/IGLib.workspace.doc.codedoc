@@ -1,8 +1,8 @@
 <#
 .SYNOPSIS
-    Script for generating code documentation (configuration ID "iglib"; 
-    file iglib.dox - the LEGACY IGLib) with basic source code, and NO
-    sources included.
+    Script for generating code documentation  (configuration ID "iglibnew"; 
+    file iglibnew.dox - the LEGACY IGLib from new container) with basic source
+	code, and NO sources included.
     Except ConfigurationId and IsSourcesIncluded, which are fixed, this script
     has the same parameters as GenerateCodeDoc.ps1, which it calls to do the 
     work. Overriding their default values changes the behavior of code
