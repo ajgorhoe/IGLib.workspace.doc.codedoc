@@ -30,6 +30,9 @@
     Boolean parameters are declared as [bool] rather than [switch], in order
     to make easier to specify parameters via variables or parameters of the
     calling script.
+    The script automatically clones, if necessary, the repository containing
+    binaries necessary for generation of code documentation (Doxygen and
+    Graphviz).
 
 .PARAMETER ConfigurationId
     Mandatory (exception is thrown if not specified). It specifies the
