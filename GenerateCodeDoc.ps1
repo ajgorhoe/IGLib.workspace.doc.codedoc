@@ -167,7 +167,10 @@ Write-Host ""
 Write-Host "New path: $env:PATH"
 Write-Host ""
 
-Write-Host "Creating code documentation for configuration `"$ConfigurationId`"..."
+Write-Host "`nCreating code documentation for configuration `"$ConfigurationId`"...`n"
+Write-Host "Executing:"
+Write-Host "  & $doxygenExe $doxygenConfig"
+Write-Host "`n"
 & $doxygenExe $doxygenConfig
 
 

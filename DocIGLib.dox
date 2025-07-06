@@ -766,9 +766,10 @@ WARN_LOGFILE           = DocIGLib.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT           =    \
+INPUT           =   "../../IGLibCore/src"   \
+				=   "../../IGLibCore/src/tests/"   \
 #					"../../iglib/igbase" \
-					"../../iglib/igbase" \
+#					"../../iglib/igbase" \
 #                    "../../iglib/igforms" \
 #                    "../../iglib/reportermsg" \
 #                    "../../iglib/extensions"

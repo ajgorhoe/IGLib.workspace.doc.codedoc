@@ -21,7 +21,7 @@ param (
 )
 
 # Fixed parameters for calling GenerateCodeDoc.ps1:  # this block must come after param(...)
-$ConfigurationId = "DocIgLib1"
+$ConfigurationId = "DocIgLib"
 $IsSourcesIncluded = $false
 
 ########################### Fixed part of the scrippt:
