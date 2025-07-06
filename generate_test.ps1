@@ -27,32 +27,19 @@
 #>
 
 param (
-    [switch]$ForceUpdates, # = $False,
-    [switch]$LaunchDoc
+    [string]$ConfigurationId = "test",
+    [bool]$IsSourcesIncluded = $false,
+    [bool]$ForceUpdates = $false,
+    [bool]$LaunchDoc = $true
 )
-
-# Prefix used for setting/retrieving global variables
-$ParameterGlobalVariablePrefix = "CurrentRepo_"
 
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
 $generationScript = (Join-Path $scriptDir "GenerateCodeDoc.ps1")
 
-& $generationScript -ConfigurationId "test"    `
-    -LaunchDoc  `
-#    -ForceUpdates  `
+& $generationScript -ConfigurationId $ConfigurationId    `
+    -IsSourcesIncluded $IsSourcesIncluded `
+    -LaunchDoc $LaunchDoc  `
+    $ForceUpdates $ForceUpdates  
     
-
-# -LaunchDoc   
-
-
-$global:CodeDoc_ConfigurationId = "iglib"
-$global:CodeDoc_IsSourcesIncluded = $null
-
-
-
-
-
-
-
 

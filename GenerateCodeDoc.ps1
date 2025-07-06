@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Script file for generating code documentation for a specific 
+    Script file for generating HTML code documentation for a specific 
 	configuration.
 
 .NOTES
@@ -9,20 +9,55 @@
 	License: https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md
 
 .DESCRIPTION
-    This script defines a function `UpdateOrCloneRepository` and various helper functions
-    that clone or update a Git repository, optionally resolving parameters from global variables.
-    It supports multiple remotes, references (branch/tag/commit), error handling, and more.
+    The configuration is spcified by the mandatory parameter $ConfigurationId.
+    This defines the Doxygen file containing the configuration options for
+    generation, which is simply ($ConfigurationId).dox, as well as the path 
+    where the documentation is generated (generated/($ConfigurationId)/html,
+    or in case that sources are included, similar path starting with
+    "generated_with_sources").
+    The output path must be specified in the corresponding .dox configuration 
+    file, and must respect the above agreement. This includes inclusion of
+    sources in the generated configuration, in which case the documentation
+    must be generated in the direectory "generated_with_sources" rather than
+    "generated".
+    This script is usually run by another script, which is created for 
+    generating a specific documentation. Examples are generate_test.ps1
+    and generate_test_with_sources.ps1, which are aimed for testing. That
+    script must provide correct parameter to this script, and it usually
+    enables modifyig default values by explicitly specifying the parameters of
+    that script, which have the same names as the corresponding parameters of
+    this script.
+    Boolean parameters are declared as [bool] rather than [switch], in order
+    to make easier to specify parameters via variables or parameters of the
+    calling script.
 
-    When run with `-Execute`, the script calls `UpdateOrCloneRepository` with the
-    specified or inferred parameters. When run with `-DefaultFromVars`,
-    unspecified parameters are automatically pulled from global variables prefixed with 'CurrentRepo_'.
+.PARAMETER ConfigurationId
+    Mandatory (exception is thrown if not specified). It specifies the
+    configuration (a .dox file with the same name as the configuration ID)
+    according to which the documentation is generated, which in turn 
+    determines the location where the documentation is generated. If the 
+    documentation includes source files, this location is 
+    generated/($ConfigurationId)/html, otherwise it is
+    generated_with_sources/($ConfigurationId)/html.
 
-.PARAMETER Directory
-    The local directory.
+.PARAMETER IsSourcesIncluded
+    Specifies whether sources are included or not. This is informative 
+    parameter, but it is relevant when launch of the documentation is
+    requested after generation, because knowledge of this parmeter value is
+    necessary to determine the location of generated documentation.
 
+.PARAMETER ForceUpdates
+    If true then the repository containing the binaries necessary for 
+    generation of documentation is updated evn if its clone exists at the
+    expected location. Default is false.
 
+.PARAMETER LaunchDoc
+    If true the the index of generated HTML documentation is shown in the 
+    default web browser after successful generation. Default is true, which 
+    should be overridden when documentation is generated in the CI/CD pipeline.   
+    
 .EXAMPLE
-    .\UpdateOrCloneRepository.ps1 -Directory "C:\Repos\Example" -Address "https://github.com/foo/bar.git" -Execute
+    .\GenerateCodeDoc.ps1 -LaunchDoc 1
 
     Clones or updates the repo in C:\Repos\Example, using the default remote name 'origin',
     and prints status messages to the console.
@@ -31,10 +66,14 @@
 
 param (
     [string]$ConfigurationId,
-    [switch]$IsSourcesIncluded,
-    [switch]$ForceUpdates, # = $False,
-    [switch]$LaunchDoc
+    [bool]$IsSourcesIncluded = $true,
+    [bool]$ForceUpdates = $false,
+    [bool]$LaunchDoc = $true
 )
+
+if (-not $ConfigurationId) {
+    throw "Missing required parameter: -ConfigurationId"
+}
 
 function Get-CanonicalAbsolutePath {
     param([string]$Path)
@@ -50,8 +89,8 @@ Write-Host "============================================================"
 Write-Host "GenerateCodeDoc.ps1:"
 Write-Host ""
 
-# Prefix used for setting/retrieving global variables
-$ParameterGlobalVariablePrefix = "CodeDoc_"
+# # Prefix used for setting/retrieving global variables
+# $ParameterGlobalVariablePrefix = "CodeDoc_"
 
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
@@ -69,7 +108,7 @@ $graphvizDir = (Join-Path $binariesDir "bin/graphviz/bin/")
 $doxygenConfig = (Join-Path $scriptDir ($ConfigurationId + ".dox"))
 $docDir = "generated"
 if ($IsSourcesIncluded) {
-    $docDir = generated_with_sources
+    $docDir = "generated_with_sources"
 }
 # Calculate path to the index.html of the generated documentation:
 $docFile = (Join-Path $scriptDir ($docDir + "/" + $ConfigurationId + "/html/index.html"))
@@ -136,7 +175,6 @@ if ($LaunchDoc) {
     Start-Process $docFile     # should work cross-platform
     # & $docFile    # not cross-platform (need to make file executable on Linux)
 }
-
 
 Write-Host ""
 Write-Host "Code documentation completed for `"$ConfigurationId`"."
