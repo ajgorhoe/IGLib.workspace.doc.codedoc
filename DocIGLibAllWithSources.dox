@@ -780,15 +780,17 @@ INPUT           =   \
 					"../../iglib/igbase"             \
                     "../../iglib/igforms"            \
                     "../../iglib/extensions"         \
-                    "../../iglib/reportermsg"        \
                     "../../iglibapp"                 \
                     "../../shelldev"                 \
                     "../../igtest"                   \
                     "../../unittests"                \
                     "../../igsandbox/imageprocessing"              \
-                    "../../igsandbox/InterprocessCommunication"    \
                     "../../igsandbox/numerics"                     \
                     "../../igsandbox/PhysicalData"                 \
+
+
+#                    "../../iglib/reportermsg"        \
+#                    "../../igsandbox/InterprocessCommunication"    \
 
 
 # This tag can be used to specify the character encoding of the source files
