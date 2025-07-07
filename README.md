@@ -8,7 +8,7 @@ Doxygen and other binaries are automatically downloaded (by cloning a dedicated 
 
 * [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
 * [Customize for Other Projects](#customize-for-other-projects)
-* [Use with Legacy IGLib](#use-with-legacy-iglib)
+* [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
 * [Misc Remarks](#miscellaneous-remarks)
 
 ## Use with the Investigative Generic Library (IGLib)
@@ -71,15 +71,23 @@ In order to make the customized scripts really easy to use, it is recommended to
     * In the generation script, you will probably only need to modify the fixed parameters:
       * Choose the suitable value for ***`ConfigurationId`***, which identifies the configuration of documentation generation. This **must correspond to the name of your Doxygen configuration file** (**without the extension** *.dox*), and will also be the name of the subdirectory in which the code documentation is generated.
       * Set the ***`IsSourcesIncluded`*** to either **`$true`** (if **sources** are **included** in the generated documentation) or **`$false`** (if **sources** are **not included**).
-        * **Important**: the value **must correspond to the value of the `SOURCE_BROWSER` configuration option** in the corresponding **Doxygen configuration file (.dox)** (where it must be **`YES`** for $true and **`NO`** for $false).
-      * In the **corresponding Doxygen configuration file**, make sure to **adapt** the following **configuration options** according to your specific options:
-        * 
-        *  
+        * **Important**: the value **must correspond to the value of the `SOURCE_BROWSER` configuration option** in the corresponding **Doxygen configuration file (.dox)** (where it must be **`YES`** for `$true` and **`NO`** for `$false`).
+    * In the **corresponding Doxygen configuration file**, make sure to **adapt** the following **configuration options** according to your specific options:
+      * `PROJECT_NAME`, `PROJECT_BRIEF` (title and short description), which are dispayed in the generated documentation to distinguish different documentations and provide short information, and `PROJECT_LOGO` (an icon also displayed in the documentation).
+      * `OUTPUT_DIRECTORY` - the directory where the documentation will be generated, relative to the configuration file. You can keep using the IGLib's conventions: documentations without source code are generated in the `generated/` subdirectory of the `codedoc` repository, and documentaitons with source code included are generated in the `generated_with_sources` subdirectory. Within these directories, there is another directory, which by IGLib convention should have the same name as the Doxygen configuration file used (without the `.dox` extension).
+      * `INPUT` specifies the directories (and / or files) from which the source code for generated documentation is obtained. Paths are relative to the location of Doxygen configuration file. You can put each entry in a separate line and end lines with a backslash character `\`, whichtell the configuration parser that the next line is also part of the value assigned to the configuration option.
+      * `EXCLUDE` contains the directories and files that should be excluded from the generated documentation.
+    * Check fo eventual other configuration options that you might want to modify.
+* It is recommended to ***clean the branch*** containing your custom scripts (delete files and directories that you don't need), such that it is easily navigate the directory and find stuff.
+  * **Leave** the **`GenerateCodeDoc.ps1`**, **`UpdateOrCloneRepository.ps1`**, and **`UpdateRepo_codedoc_resources.ps1`** scripts untouched, because they are crucial for source generation.
+  * It is recommended to leave the directories `css/` (contains custom cascading style sheets that you can use to nicely format the documentation), `sample_code/` (contains sample code for test generation, which is very fast and us useful to experiment with different configuration options), and `generated` and `generated_with_sources` directories.
+  * It is recommended to *leave the test generation scripts and configurations* (`generate_test.ps1`, `generate_test_with_sources.ps1`, `test.dox`, and `test_with_sources.dox`) on the bustomized branch. These generate two flavors of documentation (one without the source code and the other including the source code) for a small code set. Generations are very fast and therefore these files are suitable for playing with different configuration options or different ways of launching the generation scripts.
+  * Apart from the above, you can remove all generation scripts and Doxygen configurations that you don't need, i.e., the following pre-existing files:
+    * `generate_*.bat`, `*.dox`, `generate_*.ps1`, `GenerateDoc*.ps1` (except those created by yourself as part of customization).
+    * If you will not use batch scripts for generation (the old way of using the repository), then you can delete all `.bat` files and also the `bootstrappingscripts` auxiliary directory.
+  * **Modify `code_documentation.html` or replace it** with your own file, such that the HTML file contains links to your own generated code documentation indices for easier browsing.  
 
-  
-
-
-## Use with Legacy IGLib
+## Use with the Legacy IGLib
 
 In order to use this repository, clone it by using the IGLib container repository located at:
 
@@ -118,9 +126,7 @@ There are **different flavors of documentation** for the same code project, whic
 * `generate_iglib_with_sources.ps1` includes source code in the generated documentation. functions, classes, properties, etc., are linked to their definition of syntax-highlighted source code represented in HTML. Conversely, entities in code are back-linked to their documentation, which is a truly powerful feature that makes navigation easy.
 * `generate_igliball_with_sources.ps1` creates documentation for extended set of sources, with source code included.
 
-For additional information, you can also check the readme file of the above container repository for information about how to properly clone and use IGLib repositories.
-
-For more information, see the documentation from IGLib base repository located at:
+For additional information, you can also check the readme file of the above container repository (e.g., for information about how to properly clone and use IGLib repositories). Useful informatoin can also be found in the `README.md` file of IGLib base repository located at:
 
 > *https://github.com/ajgorhoe/IGLib.workspace.base.iglib.git*
 
