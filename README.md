@@ -6,10 +6,78 @@ Doxygen and other binaries are automatically downloaded (by cloning a dedicated 
 
 **Contents**:
 
-* [Use with Legacy IGLib](#use-with-legacy-iglib)
-* [Use with new IGLib](#use-with-new-iglib)
+* [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
 * [Customize for Other Projects](#customize-for-other-projects)
+* [Use with Legacy IGLib](#use-with-legacy-iglib)
 * [Misc Remarks](#miscellaneous-remarks)
+
+## Use with the Investigative Generic Library (IGLib)
+
+The easiest way to use this repository for generating code documentation for the new IGLib libraries is via the *IGLib container repository*. First, **clone the container repository** located at:
+
+> https://github.com/ajgorhoe/iglibmodules
+
+Then, **run one of the clone/update *[PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)* scripts** in the cloned container repository in order to clone the source code repositories from which code documentation will be generated. For example, run the
+
+`UpdateRepos_Extended.ps1`
+
+**Change directory to the cloned *igmodules* repository**, then **run the *PowerShell*** (*Windows*) or the [*cross-platform PowerShell (**pwsh**)* (*Windows, Linux, MacOS*...)](https://github.com/PowerShell/PowerShell) and **execute** the command
+
+`./UpdateRepoGroup_Extended.ps1`
+
+Alternatively, you can run the following command *in system command shell*:
+
+`pwsh -File ./UpdateRepoGroup_Extended.ps1`
+
+(you can use `PowerShell` instead of `pwsh` on Windows). You can *[download PowerShell here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)*.
+
+Next, you need to **clone the **codedoc** repository** at the correct location. In the cloned *igmodules* repository, **change directory to the *_doc/*** subdirectory and run the following command in PowerShell:
+
+`./UpdateRepo_codedoc.ps1`
+
+Then, **change directory to the *_doc/codedoc/*** subdirectory of the cloned *igmodules* repository and **run one of the scripts** for generating IGLib code documentation:
+
+* `GenerateDocIGLib.ps1` generates the basic IGLib code documentation.
+* `GenerateDocIGLibAll.ps1` generats the *extended* IGLib code documnentation, with some additional code included in generation, such as tests, experimental code and some external libraries.
+* `GenerateDocIGLibWithSources.ps1` generates the basic IGLib documentation (from the same sources as 'GenerateDocIGLib.ps1'), but *with source code included* (in form of HTML) in the documentation. This features the powerful linkage between the documentation and definitions of documented entities in the source code, and vice versa.
+* `GenerateDocIGLibAllWithSources.ps1` generats the *extended* IGLib code documnentation (from the same sources as 'GenerateDocIGLibAll.ps1'), but *with source code included* (in form of HTML) in the documentation. This documentation features the powerful linkage between the documentation and definitions of documented entities in the source code, and vice versa.
+
+Documentation that does not include source code is *generated in the `_doc/codedoc/generated/`* subdirectory of the cloned *igmodules* repository, and documentation that includes source code is *generated in `_doc/codedoc/generated_with_sources/`*. Such separation is a common practice in generation of code documentation with this repository because deployment of documentation that includes complete source code is in many cases more restricted than documentation without source code.
+
+After the particular flavor of code documentation is generated, it is usually opened in the default browser. The generated code documentation can also be conveniently browsed from the following index page within the cloned *igmodules* repository:
+
+`_doc/codedoc/code_documentation.html`
+
+## Customize for Other Projects
+
+This repositoty can be easily utilized for generation of code documentation for other purposes. All that is needed is to **add the appropriate Doxygen configuration file and a script for triggering generation**. These files should be added **on a seeparate branch** because the original repository is meant to be used for IGLib only.
+
+In order to make the customized scripts really easy to use, it is recommended to add the script that clone the *codedoc repository*. It is also recommended to *create your own fork of the codedoc repository* and to use a different branch for your custom scripts. In this way, you can update the basic tools with new stuff developed in the original repository over time, add your custom generation scripts, and even delete the generation scripts and configuration that you don't need. Below is a sequence of steps that will make use of your customized scripts reeally comfortable.
+
+* **Decide where** to put the code documentation tools (this repository). The best possibility is to put it within another repository that contains the code to be documented, or in a special place of a container repository, which will contain clones of several repositories whose code you want to document (this approach is [used in case of IGLib](#use-with-the-investigative-generic-library-iglib)). In this way, when/whereever you clone the original repositories, you will have documentation generation tools at hand.
+* **Create** your own **fork of the *codedoc* repository**.
+  * Do not touch the main branch. Create a new branch to contain your scripts and configurations.
+  * You can always update the improved general tools from the original repository. Just *set the original codedoc repository as one of remotes*, then you can *occasionally pull changes from the main branch of the original codedoc repository*.
+* Next to the location where you want to have the *codedoc* repository cloned, **copy the cloning/updating scripts *[UpdateRepo_codedoc.ps1](https://github.com/ajgorhoe/iglibmodules/blob/main/_doc/UpdateRepo_codedoc.ps1)* and *[UpdateOrCloneRepository.ps1](https://github.com/ajgorhoe/iglibmodules/blob/main/_scripts/UpdateOrCloneRepository.ps1)***. You may need to **correct** the `UpdateRepo_codedoc.ps1`, such that the variable `UpdatingScriptPath` contains teh correct relative path (with respect to the script) of the `UpdateOrCloneRepository.ps1` scripts (in the link, the relative path is adapted to the situation in the *codedoc* repository where the scripts are located in different directories).
+* In your forked *codedoc* repository, **create the branch that will contain your customizations**.
+* In the ***`UpdateRepo_codedoc.ps1` script*** that you have copied to clone or update the forked *codeedoc* repository, make the following changes:
+  * Change the ***`global:CurrentRepo_Ref`*** variable such that it contains the name of **your dedicated branch** containing your customizations.
+  * Change the ***`global:CurrentRepo_Address`*** variable such that it contains the **address of your forked *codedoc* repository**.
+  Set variables ***`global:CurrentRepo_AddressSecondary`*** and **`global:CurrentRepo_AddressTertiary`** to **empty strings**, or (if you will maintain several mirror repositories), set them to the addresses of your mirror repositories of the forked *codedoc* repository.
+* **customize your dedicated branch**:
+  * **Add the PowerShell generation scripts** for generating different flavors / versions of your code documentation. You can use the `GenerateDocIGLib.ps1` as template.
+  * For each generation script, **add the corresponding Doxygen configuration file**. You can use the `DocIGLib.dox` as template.
+  * Take care of the following:
+    * In the generation script, you will probably only need to modify the fixed parameters:
+      * Choose the suitable value for ***`ConfigurationId`***, which identifies the configuration of documentation generation. This **must correspond to the name of your Doxygen configuration file** (**without the extension** *.dox*), and will also be the name of the subdirectory in which the code documentation is generated.
+      * Set the ***`IsSourcesIncluded`*** to either **`$true`** (if **sources** are **included** in the generated documentation) or **`$false`** (if **sources** are **not included**).
+        * **Important**: the value **must correspond to the value of the `SOURCE_BROWSER` configuration option** in the corresponding **Doxygen configuration file (.dox)** (where it must be **`YES`** for $true and **`NO`** for $false).
+      * In the **corresponding Doxygen configuration file**, make sure to **adapt** the following **configuration options** according to your specific options:
+        * 
+        *  
+
+  
+
 
 ## Use with Legacy IGLib
 
@@ -55,10 +123,6 @@ For additional information, you can also check the readme file of the above cont
 For more information, see the documentation from IGLib base repository located at:
 
 > *https://github.com/ajgorhoe/IGLib.workspace.base.iglib.git*
-
-## Use with new IGLib
-
-## Customize for Other Projects
 
 ## Miscellaneous Remarks
 
