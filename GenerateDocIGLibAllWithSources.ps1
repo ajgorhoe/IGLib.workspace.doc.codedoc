@@ -24,7 +24,7 @@ param (
 $ConfigurationId = "DocIgLibAllWithSources"
 $IsSourcesIncluded = $true
 
-########################### Fixed part of the scrippt:
+########################### Fixed part of the script:
 
 # Get the script path to determine the path of the documentation generating
 # script:
