@@ -1,13 +1,16 @@
 # About this Repository
 
-This repository contains scripts for *generating **code documentation*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other code projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)).
+This repository contains *scripts for generating **code documentation*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other code projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)). The repository can be [easily customized to support other software projects](#customizing-the-repository-for-other-software-projects).
 
-Doxygen and other binaries are automatically downloaded (by cloning a dedicated repository) when documentation is generated via scripts. Currently, documentation can only be generated on Windows because the binaries are provided only for this OS. This can be easily fixed by providing binaries for other systems and putting them on the same relative location. Currently, the cross-platform scripts don't use system's installation of Doxygen and GraphViz (the older batch scripts have this possibility), but this can be fixed, too.
+Doxygen and other binaries are automatically downloaded (by cloning a dedicated repository) when documentation is generated via scripts. Currently, documentation can only be generated on Windows because the binaries are provided only for this OS. This can be fixed by providing binaries for other systems and adding them to the binaries repository. Currently, the cross-platform scripts don't use system's installation of Doxygen and GraphViz (the older batch scripts have this possibility), but this can be fixed, too.
+
+**Current development and future plans**:
+In July 2025, all maintained configurations switched to PowerShell instead of batch scripts, whic also greatly simplified the scripts. Scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository. The `generate_iglibnew.ps1` is the equivalent for the [new IGLib repo container](https://github.com/ajgorhoe/iglibmodules), which already supports clonning the legacy IGLib in its entirety but clones `workspaceprojects` and `workspaceprojects_all` outside (two levels below) the container repository. This script will be complmented by others for different flavors of legacy IGLib, and the legacy container will slowly lessen its importance. In the future, the ability to **use Doxygen and Graphviz from system installation** will be added to the PowerShell generation scripts (this possibility is provied by the old batch scripts, which will be phased out after full feature pairity is reached).
 
 **Contents**:
 
 * [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
-* [Customize for Other Projects](#customize-for-other-projects)
+* [Customizing the Repository for Other Software Projects](#customizing-the-repository-for-other-software-projects)
 * [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
 * [Misc Remarks](#miscellaneous-remarks)
 
@@ -48,7 +51,7 @@ After the particular flavor of code documentation is generated, it is usually op
 
 `_doc/codedoc/code_documentation.html`
 
-## Customize for Other Projects
+## Customizing the Repository for Other Software Projects
 
 This repositoty can be easily utilized for generation of code documentation for other purposes. All that is needed is to **add the appropriate Doxygen configuration file and a script for triggering generation**. These files should be added **on a seeparate branch** because the original repository is meant to be used for IGLib only.
 
