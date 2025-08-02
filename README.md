@@ -1,6 +1,6 @@
 # About this Repository
 
-This repository contains *scripts for generating **code documentation*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other code projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)). The repository can be [easily customized to support other software projects](#customizing-the-repository-for-other-software-projects).
+This repository contains *scripts for generating **code documentation*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other software projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)). The repository can be [easily customized to support other software projects](#customizing-the-repository-for-other-software-projects).
 
 Doxygen and other binaries are automatically downloaded (by cloning a dedicated repository) when documentation is generated via scripts. Currently, documentation can only be generated on Windows because the binaries are provided only for this OS. This can be fixed by providing binaries for other systems and adding them to the binaries repository. Currently, the cross-platform scripts don't use system's installation of Doxygen and GraphViz (the older batch scripts have this possibility), but this can be fixed, too.
 
@@ -49,7 +49,7 @@ Documentation that does not include source code is *generated in the `_doc/coded
 
 After the particular flavor of code documentation is generated, it is usually opened in the default browser. The generated code documentation can also be conveniently browsed from the following index page within the cloned *igmodules* repository:
 
-`_doc/codedoc/code_documentation.html`
+> ***[_doc/codedoc/CodeDocumentation.html](./CodeDocumentation.html)***
 
 ## Customizing the Repository for Other Software Projects
 
@@ -90,7 +90,7 @@ In order to make the customized scripts really easy to use, it is recommended to
   * Apart from the above, you can remove all generation scripts and Doxygen configurations that you don't need, i.e., the following pre-existing files:
     * `generate_*.bat`, `*.dox`, `generate_*.ps1`, `GenerateDoc*.ps1` (except those created by yourself as part of customization).
     * If you will not use batch scripts for generation (the old way of using the repository), then you can delete all `.bat` files and also the `bootstrappingscripts` auxiliary directory.
-  * **Modify `code_documentation.html` or replace it** with your own file, such that the HTML file contains links to your own generated code documentation indices for easier browsing.  
+  * **Modify `CodeDocumentation.html` or replace it** with your own file, such that the HTML file contains links to your own generated code documentation indices for easier browsing.  
 
 ## Use with the Legacy IGLib
 
@@ -120,7 +120,7 @@ Open the `index.html` in order to browse the documentation. Its complete path re
 
 You can also open the
 
-> ...//workspace/codedoc/code_documentation.html
+> ...//workspace/codedoc/CodeDocumentation.html
 
 file, which contains links to various flavors of the generated documentation. Links will work only after the documentation is generated. Normally, documentation should also be launched in a browser after generation.
 
@@ -173,4 +173,4 @@ Use if doxywizard is not very recommended, however, especially not to correct  p
 ## License and Terms of Use
 
 Copyright (c) Igor Grešovnik
-This repository is part of the [*Investigative Generic Library (**IGLib**)*](). See [license](./LICENSE.md) for terms of use.
+This repository is part of the [*Investigative Generic Library (**IGLib**)*](). See [LICENSE.md](./LICENSE.md) ([original found here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md)) for terms of use.
