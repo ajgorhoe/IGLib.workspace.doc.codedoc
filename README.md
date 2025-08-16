@@ -1,4 +1,7 @@
-# About this Repository
+
+# Code Documentation Generation Tools (codedoc)
+
+## About this Repository
 
 This repository contains *scripts for generating **[code documentation](CodeDocumentation.html)*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other software projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)). The repository can be [easily customized to support other software projects](#customizing-the-repository-for-other-software-projects).
 
@@ -173,4 +176,6 @@ Use if doxywizard is not very recommended, however, especially not to correct  p
 ## License and Terms of Use
 
 Copyright (c) Igor Grešovnik
-This repository is part of the [*Investigative Generic Library (**IGLib**)*](). See [LICENSE.md](./LICENSE.md) ([original found here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md)) for terms of use.
+See [LICENSE.md](./LICENSE.md) ([original is located here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md)) for terms of use.
+
+This repository is part of the *[Investigative Generic Library](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md) (**IGLib**)*.
