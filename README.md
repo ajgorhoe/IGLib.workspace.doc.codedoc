@@ -179,3 +179,6 @@ Copyright (c) Igor Grešovnik
 See [LICENSE.md](./LICENSE.md) ([original is located here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/blob/master/LICENSE.md)) for terms of use.
 
 This repository is part of the *[Investigative Generic Library](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md) (**IGLib**)*.
+
+Disclaimer:  
+The repository owner reserves the right to change the license to one of the permissive open source licenses, such as the Apache-2 or MIT license.
