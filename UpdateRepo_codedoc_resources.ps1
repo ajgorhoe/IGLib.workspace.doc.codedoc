@@ -33,8 +33,8 @@ $global:CurrentRepo_Directory = "../codedoc_resources/"
 $global:CurrentRepo_Ref = "master"
 $global:CurrentRepo_Address = "https://github.com/ajgorhoe/IGLib.workspace.codedoc_resources.git"
 $global:CurrentRepo_Remote = "origin"
-$global:CurrentRepo_AddressSecondary = $null
-$global:CurrentRepo_RemoteSecondary = $null
+$global:CurrentRepo_AddressSecondary = "https://gitlab.com/ajgorhoe/iglib.workspace.codedoc_resources"
+$global:CurrentRepo_RemoteSecondary = "remoteGitLab"
 $global:CurrentRepo_AddressTertiary = $null
 # "d:/backup_sync/bk_code/git/ig/misc/iglib_modules/IGLibScripting"
 $global:CurrentRepo_RemoteTertiary = "local"
