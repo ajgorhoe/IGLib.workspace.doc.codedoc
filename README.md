@@ -20,9 +20,11 @@ In July 2025, all maintained configurations switched to PowerShell instead of ba
 
 ## List of Branches
 
-* main - new code documentation for IGLib Core repositories
-* master - code documentation for legacy IGLib Framework repositories (run  from the legacy container)
-* Branches for additional IGLib projects:
+This repository uses different branches to contain code documentation generation scripts for different repositories. Since setting may different a lot between different repositories, these branches will not be merged into one another. If some developments can be copied between them, this will be done manually. Main branches related to IGLib are the following ([as explained here](#customizing-the-repository-for-other-software-projects), the `codedoc repository can be easily adapted for other repositories, too`):
+
+* **`main`** - `codedoc` utilities for the **[new IGLib container repository](https://github.com/ajgorhoe/iglibcontainer.git)** , located in `_doc/codedoc/`. This also includes documentation for some legacy IGLib repositories (still used with the new IGLib) managed by the new container repository
+* **`iglibrepo/iglibcontainerLegacy/repoMain`** - `codedoc` utilities for the **[legacy IGLib container](https://github.com/ajgorhoe/iglibcontainer.git)**, located in `ws/workspace/codedoc/`.
+* iglibrepo/IGLibCore/repoMain - codedoc utilities for the IGLibCore repository (the basic reposiory for the new IGLib), located in doc/codedoc/
 
 ## Use with the Investigative Generic Library (IGLib)
 
