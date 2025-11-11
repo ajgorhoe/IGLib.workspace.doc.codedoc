@@ -193,3 +193,4 @@ This repository is part of the *[Investigative Generic Library](https://github.c
 
 Disclaimer:  
 The repository owner reserves the right to change the license to one of the permissive open source licenses, such as the Apache-2 or MIT license.
+
