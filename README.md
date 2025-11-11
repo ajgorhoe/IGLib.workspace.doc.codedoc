@@ -16,6 +16,13 @@ In July 2025, all maintained configurations switched to PowerShell instead of ba
 * [Customizing the Repository for Other Software Projects](#customizing-the-repository-for-other-software-projects)
 * [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
 * [Misc Remarks](#miscellaneous-remarks)
+* [List of Branches](#list-of-branches)
+
+## List of Branches
+
+* main - new code documentation for IGLib Core repositories
+* master - code documentation for legacy IGLib Framework repositories (run  from the legacy container)
+* Branches for additional IGLib projects:
 
 ## Use with the Investigative Generic Library (IGLib)
 
