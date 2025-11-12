@@ -22,14 +22,19 @@ Doxygen and other binaries are automatically downloaded (by cloning a dedicated 
 
 This repository uses different **branches** to contain code documentation generation scripts **for different target repositories**. Since setting may different a lot between different repositories, these branches will not be merged into one another. If some developments can be copied between them, this will be done manually. **Main repository branches** related to IGLib are the following ([as explained here](#customizing-the-repository-for-other-software-projects), the `codedoc` repository can be easily adapted for other repositories, too):
 
-* **`main`** - `codedoc` utilities for the **[new IGLib container repository](https://github.com/ajgorhoe/iglibmodules/)** , located in `_doc/codedoc/`. This also includes documentation for some legacy IGLib repositories (still used with the new IGLib) managed by the new container repository
-* **`iglibrepo/iglibcontainerLegacy/repoMain`** - `codedoc` utilities for the **[legacy IGLib container repository](https://github.com/ajgorhoe/iglibcontainer/)**, located in `ws/workspace/codedoc/`
-* **`iglibrepo/IGLibCore/repoMain`** - `codedoc` utilities for the **[IGLibCore repository](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/)** (the base reposiory for the new IGLib), located in `doc/codedoc/`
+* **`main`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/main/)) - `codedoc` utilities for the **[new IGLib container repository](https://github.com/ajgorhoe/iglibmodules/)** , located in `_doc/codedoc/`. This also includes documentation for some legacy IGLib repositories (still used with the new IGLib) managed by the new container repository
+* **`iglibrepo/iglibcontainerLegacy/repoMain`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/iglibrepo/iglibcontainerLegacy/repoMain/)) - `codedoc` utilities for the **[legacy IGLib container repository](https://github.com/ajgorhoe/iglibcontainer/)**, located in `ws/workspace/codedoc/`
+* **`iglibrepo/IGLibCore/repoMain`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/iglibrepo/IGLibCore/repoMain/)) - `codedoc` utilities for the **[IGLibCore repository](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/)** (the base reposiory for the new IGLib), located at `doc/codedoc/` within the repository; this branch can be used as template for customization for other repositories.
 
 For feature development and other tasks, sub-branches can be branched off the main repository brenches and later merged back.
 
 **Current development and future plans**:
-In July 2025, all maintained configurations switched to PowerShell instead of batch scripts, whic also greatly simplified the scripts. Scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository. The `generate_iglibnew.ps1` is the equivalent for the [new IGLib repo container](https://github.com/ajgorhoe/iglibmodules), which already supports clonning the legacy IGLib in its entirety but clones `workspaceprojects` and `workspaceprojects_all` outside (two levels below) the container repository. This script will be complmented by others for different flavors of legacy IGLib, and the legacy container will slowly lessen its importance. In the future, the ability to **use Doxygen and Graphviz from system installation** will be added to the PowerShell generation scripts (this possibility is provied by the old batch scripts, which will be phased out after full feature pairity is reached).
+
+In July 2025, all maintained configurations switched to PowerShell scripts instead of batch scripts, which simplified the scripts and made them cross-platform.
+
+In November 2025, main repository branches were introduced (see above), which contain configuration and scripts for different target repositories. This makes customization and adaptation for new repositories much easier. Complete scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository on the legacy branch (`iglibrepo/iglibcontainerLegacy/repoMain`).
+
+ In the future, the ability to **use Doxygen and Graphviz from system installation** might be added to the PowerShell generation scripts. This possibility was provied by the old batch scripts that were removed (except on the legacy branch).
 
 ## Use with the Investigative Generic Library (IGLib)
 
@@ -70,7 +75,7 @@ After the particular flavor of code documentation is generated, it is usually op
 
 ## Customizing the Repository for Other Software Projects
 
-This repositoty can be easily utilized for generation of code documentation for other purposes. All that is needed is to **add the appropriate Doxygen configuration file and a script for triggering generation**. These files should be added **on a seeparate branch** because the original repository is meant to be used for IGLib only.
+This repositoty can be easily utilized for generation of code documentation for other purposes. All that is needed is to **add or adapt the appropriate Doxygen configuration files and scripts for triggering generation**. These files should be added **on a separate ["repository" branch](#list-of-repository-branches)** because the original repository is meant to be used for the new `IGLib` only. The simplest way is to create a new branch from the `iglibrepo/IGLibCore/repoMain` repository branch and adapt paths, descriptions and titles in the `.dox` configuration files. Copy clone / update scripts (`UpdateOrCloneRepository.ps1` and `UpdateRepo_codedoc.ps1`) to the directory where you will 
 
 In order to make the customized scripts really easy to use, it is recommended to add the script that clone the *codedoc repository*. It is also recommended to *create your own fork of the codedoc repository* and to use a different branch for your custom scripts. In this way, you can update the basic tools with new stuff developed in the original repository over time, add your custom generation scripts, and even delete the generation scripts and configuration that you don't need. Below is a sequence of steps that will make use of your customized scripts reeally comfortable.
 
