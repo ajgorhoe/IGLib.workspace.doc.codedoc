@@ -38,7 +38,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "Doc: IGLib EXTENDED"
+PROJECT_NAME           = "CodeDoc: IGLibCore EXTENDED"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The IGLib library EXTENDED - with other lilbraries and applications."
+PROJECT_BRIEF          = "IGLibCore EXTENDED - with other lilbraries and applications."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -767,30 +767,8 @@ WARN_LOGFILE           = DocIGLibAll.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../IGLibCore/tests"          \
-				    "../../IGLibCore/src"            \
-					"../../IGLibGraphics3D/tests"    \
-				    "../../IGLibGraphics3D/src"      \
-					"../../IGLibGraphics3D/tests"    \
-				    "../../IGLibGraphics3D/src"      \
-					"../../IGLibScripting/tests"     \
-				    "../../IGLibScripting/src"       \
-					"../../IGLibScriptingCs/tests"   \
-				    "../../IGLibScriptingCs/src"     \
-					"../../iglib/igbase"             \
-                    "../../iglib/igforms"            \
-                    "../../iglib/extensions"         \
-                    "../../iglibapp"                 \
-                    "../../shelldev"                 \
-                    "../../igtest"                   \
-                    "../../unittests"                \
-                    "../../igsandbox/imageprocessing"              \
-                    "../../igsandbox/numerics"                     \
-                    "../../igsandbox/PhysicalData"                 \
-
-
-#                    "../../iglib/reportermsg"        \
-#                    "../../igsandbox/InterprocessCommunication"    \
+					"../../src"  \
+					"../../tests"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -827,11 +805,7 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                "../base/shelldev/lib/externalextended"  \
-                "../base/shelldev/lib/external"          \
-                "../base/shelldev/packages"              \
-				"../base/shelldev/lib_ann"               \
-				"../base/shelldev/extensions_shell"      \
+                "../../src/0InitModules"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
