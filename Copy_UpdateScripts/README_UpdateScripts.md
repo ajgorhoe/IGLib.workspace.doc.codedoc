@@ -14,17 +14,24 @@ Usage:
 
 This should work straight. Below are some additional explanations in case anything doesn't go as expected.
 
-## Tips for Customizing the `codedoc` repository for Generation of Code Documentation
+## Tips for Customizing the `codedoc` repository for Generation of Code Documentation for Your Software
 
 The `UpdateOrCloneRepository.ps1` is a general script for cloning or updating repositories, and `UpdateRepo_codedoc.ps1` contains the settings for the specific repository and it just calls the former script and passes it the settings. This clones (or updates, if already cloned) the `codedoc` repository at the specified path and checks out the specified branch.
 
 Scripts and the repository clone (usually the `codedoc` directory) must be at the configured relative locations with respect to the target code repository (for which documentation should be generated) for everything to work correctly:
 
   * In `UpdateRepo_codedoc.ps1`, the `UpdatingScriptPath` specifies the relative location of `UpdateRepo_codedoc.ps1`, and `CurrentRepo_Directory` specifies relative path where the `codedoc` repository is cloned
-  * Within the cloned `codedoc` repository, script files need to correctly specify relative paths of the other scripts they call and of the configuration files for generating documentation (`.docx`) they use. The configuration files need to correctly define relative paths of source file directories. In particular, check the following settings in `.dox` files:
-    * `STRIP_FROM_PATH`
-    * `INPUT`
-    * `EXCLUDE`
+  * Within the cloned `codedoc` repository, script files need to correctly specify relative paths of the other scripts they call and of the configuration files for generating documentation (`.docx`) they use. The configuration files need to correctly define relative paths of source file directories. In particular, check the following settings (tags) in `.dox` files:
+    * `INPUT` (code directories and files included in documentation)
+    * `EXCLUDE`  (directories or files within the previous that are excluded from documentation)
+    * `OUTPUT_DIRECTORY`  (location of generated documentation)
+    * `STRIP_FROM_PATH`  (this part of relative paths is removed when paths are displayed)
+    * `WARN_LOGFILE`  (log file for the configuration, useful for debugging when something goes wrong)
+    * It is also helpful to set the following settings in a meaningful way:
+      * `PROJECT_NAME` (appears as title)
+      * `PROJECT_NUMBER`  (version number)
+      * `PROJECT_BRIEF`  (short description)
+      * `PROJECT_LOGO` (icon or logo - optional)
 
 Running the appropriate generation script should create the documentation and open it in the browser, such that you can see the results immediately. Afterwards, you can access the documentation via 
 
