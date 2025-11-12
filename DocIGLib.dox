@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The IGLib base library for development of numerical, technical and business applications."
+PROJECT_BRIEF          = "IGLibCore, a base module of IGLib, a library for development of numerical, technical and business applications."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
