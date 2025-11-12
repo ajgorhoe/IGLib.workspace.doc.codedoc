@@ -2,7 +2,7 @@
 This directory contains generated code documentation.
 The contained directories are therefore ignored.
 
-Yet the directory itself is part of repository in because this arrangement
+Yet the directory itself is part of repository because this arrangement
 creates less trouble for maintenance and testing of code doc. generation.
 
 When Doxygen is run directly by providing the configuration file, it 
@@ -12,5 +12,5 @@ Such a situation can be tricky because in console output, error
 notification is generated that is deceiving and hides the true cause of
 error. The log file must be checked to get a clue of the cause. If the 
 containing directory for code generation exits beforehand, such difficulties
-are avoided altogetther.
+are avoided altogether.
  
