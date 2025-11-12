@@ -14,7 +14,7 @@ Usage:
 
 This should work straight. Below are some additional explanations in case anything doesn't go as expected.
 
-## Tips for Customizing the `codedoc` repository for Generation of Code Documentation
+## Tips for Customizing the `codedoc` repository for Generation of Code Documentation for Your Software
 
 The `UpdateOrCloneRepository.ps1` is a general script for cloning or updating repositories, and `UpdateRepo_codedoc.ps1` contains the settings for the specific repository and it just calls the former script and passes it the settings. This clones (or updates, if already cloned) the `codedoc` repository at the specified path and checks out the specified branch.
 
