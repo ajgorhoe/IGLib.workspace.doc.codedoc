@@ -24,15 +24,15 @@ This repository uses different **branches** to contain code documentation genera
 
 * **`main`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/main/)) - `codedoc` utilities for the **[new IGLib container repository](https://github.com/ajgorhoe/iglibmodules/)** , located in `_doc/codedoc/`. This also includes documentation for some legacy IGLib repositories (still used with the new IGLib) managed by the new container repository
 * **`iglibrepo/iglibcontainerLegacy/repoMain`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/iglibrepo/iglibcontainerLegacy/repoMain/)) - `codedoc` utilities for the **[legacy IGLib container repository](https://github.com/ajgorhoe/iglibcontainer/)**, located in `ws/workspace/codedoc/`
-* **`iglibrepo/IGLibCore/repoMain`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/iglibrepo/IGLibCore/repoMain/)) - `codedoc` utilities for the **[IGLibCore repository](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/)** (the base reposiory for the new IGLib), located in `doc/codedoc/` of the repository; this branch can be used as template for customization for other repositories.
+* **`iglibrepo/IGLibCore/repoMain`** ([browse here](https://github.com/ajgorhoe/IGLib.workspace.doc.codedoc/tree/iglibrepo/IGLibCore/repoMain/)) - `codedoc` utilities for the **[IGLibCore repository](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/)** (the base reposiory for the new IGLib), located at `doc/codedoc/` within the repository; this branch can be used as template for customization for other repositories.
 
 For feature development and other tasks, sub-branches can be branched off the main repository brenches and later merged back.
 
 **Current development and future plans**:
 
-In July 2025, all maintained configurations switched to PowerShell scripts instead of batch scripts, whic simplified the scripts and made them cross-platform.
+In July 2025, all maintained configurations switched to PowerShell scripts instead of batch scripts, which simplified the scripts and made them cross-platform.
 
-In November 2025, main repository branches were introduced (see above), which contain configuration and scripts for different target repositories. This makes customization and adaptation for new repositories much easier. Complete scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository only on the legacy branch (`iglibrepo/iglibcontainerLegacy/repoMain`).
+In November 2025, main repository branches were introduced (see above), which contain configuration and scripts for different target repositories. This makes customization and adaptation for new repositories much easier. Complete scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository on the legacy branch (`iglibrepo/iglibcontainerLegacy/repoMain`).
 
  In the future, the ability to **use Doxygen and Graphviz from system installation** might be added to the PowerShell generation scripts. This possibility was provied by the old batch scripts that were removed (except on the legacy branch).
 
