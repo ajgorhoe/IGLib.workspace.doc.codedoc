@@ -1,32 +1,35 @@
 
 # Code Documentation Generation Tools (codedoc)
 
+**Contents**:
+
+* See also:
+  * [Specifics for the Target Repository](./README_RepositorySpecific.md)
+* [About this Repository](#about-this-repository)
+  * [List of Branches](#list-of-repository-branches)
+* [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
+* [Customizing the Repository for Other Software Projects](#customizing-the-repository-for-other-software-projects)
+* [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
+* [Misc Remarks](#miscellaneous-remarks)
+
 ## About this Repository
 
 This repository contains *scripts for generating **[code documentation](CodeDocumentation.html)*** for *IGLib ([legacy](https://github.com/ajgorhoe/IGLib.workspace.base.iglib/blob/master/README.md) & [new](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/blob/main/README.md))* and other software projects. It uses **[Doxygen](https://www.doxygen.nl/index.html)** with **[Graphviz](https://graphviz.gitlab.io/)** to generate a rich and easily readable HTML documentation of computer code ([example can be seen here](https://ajgorhoe.github.io/IGLibFrameworkCodedoc/generated/16_04_igliball_1.7.2/html/d4/d6b/classIG_1_1Num_1_1BoundingBox.html)). The repository can be [easily customized to support other software projects](#customizing-the-repository-for-other-software-projects).
 
 Doxygen and other binaries are automatically downloaded (by cloning a dedicated repository) when documentation is generated via scripts. Currently, documentation can only be generated on Windows because the binaries are provided only for this OS. This can be fixed by providing binaries for other systems and adding them to the binaries repository. Currently, the cross-platform scripts don't use system's installation of Doxygen and GraphViz (the older batch scripts have this possibility), but this can be fixed, too.
 
-**Current development and future plans**:
-In July 2025, all maintained configurations switched to PowerShell instead of batch scripts, whic also greatly simplified the scripts. Scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository. The `generate_iglibnew.ps1` is the equivalent for the [new IGLib repo container](https://github.com/ajgorhoe/iglibmodules), which already supports clonning the legacy IGLib in its entirety but clones `workspaceprojects` and `workspaceprojects_all` outside (two levels below) the container repository. This script will be complmented by others for different flavors of legacy IGLib, and the legacy container will slowly lessen its importance. In the future, the ability to **use Doxygen and Graphviz from system installation** will be added to the PowerShell generation scripts (this possibility is provied by the old batch scripts, which will be phased out after full feature pairity is reached).
+### List of Repository Branches
 
-**Contents**:
-
-* [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
-* [Customizing the Repository for Other Software Projects](#customizing-the-repository-for-other-software-projects)
-* [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
-* [Misc Remarks](#miscellaneous-remarks)
-* [List of Branches](#list-of-branches)
-
-## List of Branches
-
-This repository uses different branches to contain code documentation generation scripts for different repositories. Since setting may different a lot between different repositories, these branches will not be merged into one another. If some developments can be copied between them, this will be done manually. **Main repository branches** related to IGLib are the following ([as explained here](#customizing-the-repository-for-other-software-projects), the `codedoc` repository can be easily adapted for other repositories, too):
+This repository uses different **branches** to contain code documentation generation scripts **for different target repositories**. Since setting may different a lot between different repositories, these branches will not be merged into one another. If some developments can be copied between them, this will be done manually. **Main repository branches** related to IGLib are the following ([as explained here](#customizing-the-repository-for-other-software-projects), the `codedoc` repository can be easily adapted for other repositories, too):
 
 * **`main`** - `codedoc` utilities for the **[new IGLib container repository](https://github.com/ajgorhoe/iglibmodules/)** , located in `_doc/codedoc/`. This also includes documentation for some legacy IGLib repositories (still used with the new IGLib) managed by the new container repository
 * **`iglibrepo/iglibcontainerLegacy/repoMain`** - `codedoc` utilities for the **[legacy IGLib container repository](https://github.com/ajgorhoe/iglibcontainer/)**, located in `ws/workspace/codedoc/`
 * **`iglibrepo/IGLibCore/repoMain`** - `codedoc` utilities for the **[IGLibCore repository](https://github.com/ajgorhoe/IGLib.modules.IGLibCore/)** (the base reposiory for the new IGLib), located in `doc/codedoc/`
 
 For feature development and other tasks, sub-branches can be branched off the main repository brenches and later merged back.
+
+**Current development and future plans**:
+In July 2025, all maintained configurations switched to PowerShell instead of batch scripts, whic also greatly simplified the scripts. Scripts for legacy IGLib (the "Framework" version) that work with the [old repo container](https://github.com/ajgorhoe/iglibcontainer) (`generate_iglib.ps1`, etc.) are lef in the repository. The `generate_iglibnew.ps1` is the equivalent for the [new IGLib repo container](https://github.com/ajgorhoe/iglibmodules), which already supports clonning the legacy IGLib in its entirety but clones `workspaceprojects` and `workspaceprojects_all` outside (two levels below) the container repository. This script will be complmented by others for different flavors of legacy IGLib, and the legacy container will slowly lessen its importance. In the future, the ability to **use Doxygen and Graphviz from system installation** will be added to the PowerShell generation scripts (this possibility is provied by the old batch scripts, which will be phased out after full feature pairity is reached).
 
 ## Use with the Investigative Generic Library (IGLib)
 
