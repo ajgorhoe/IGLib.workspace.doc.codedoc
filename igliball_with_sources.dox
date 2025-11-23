@@ -57,7 +57,7 @@ PROJECT_BRIEF          = "The IGLib base library - EXTENDED, with SOURCE referen
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO           = ../base/iglib/ig.ico
+PROJECT_LOGO           = ../../iglib/ig.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -158,7 +158,7 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = "../base"
+STRIP_FROM_PATH        = "../.."
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -766,18 +766,18 @@ WARN_LOGFILE           = iglib_all_withsources.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "../base/iglib/igbase" \
-                         "../base/iglib/igforms" \
-                         "../base/iglib/reportermsg" \
-                         "../base/iglib/extensions" \
-                         "../base/igtest"  \
-                         "../base/igsandbox/imageprocessing"  \
-                         "../base/igsandbox/InterprocessCommunication"  \
-                         "../base/igsandbox/numerics"  \
-                         "../base/igsandbox/PhysicalData"  \
-                         "../base/igapp"  \
-                         "../base/shelldev"  \
-                         "../base/unittests"
+INPUT                  = "../../iglib/igbase" \
+                         "../../iglib/igforms" \
+                         "../../iglib/reportermsg" \
+                         "../../iglib/extensions" \
+                         "../../igtest"  \
+                         "../../igsandbox/imageprocessing"  \
+                         "../../igsandbox/InterprocessCommunication"  \
+                         "../../igsandbox/numerics"  \
+                         "../../igsandbox/PhysicalData"  \
+                         "../../igapp"  \
+                         "../../shelldev"  \
+                         "../../unittests"
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -812,11 +812,11 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = "../base/shelldev/lib/externalextended"  \
-                         "../base/shelldev/lib/external"  \
-                         "../base/shelldev/packages"  \
-						 "../base/shelldev/lib_ann"  \
-						 "../base/shelldev/extensions_shell"  \
+EXCLUDE                = "../../shelldev/lib/externalextended"  \
+                         "../../shelldev/lib/external"  \
+                         "../../shelldev/packages"  \
+						 "../../shelldev/lib_ann"  \
+						 "../../shelldev/extensions_shell"  \
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
