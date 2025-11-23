@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
-    Script for generating code documentation  (configuration ID "DocIGLib";
-	file DocIGLib.dox - the modern IGLib with basic source code, and NO  
+    Script for generating code documentation  (configuration ID "ModuleDocWithSources";
+	file ModuleDocWithSources.dox - the modern IGLib with basic source code, and NO  
 	sources included.
     Except ConfigurationId and IsSourcesIncluded, which are fixed, this script
     has the same parameters as GenerateCodeDoc.ps1, which it calls to do the 
@@ -21,7 +21,7 @@ param (
 )
 
 # Fixed parameters for calling GenerateCodeDoc.ps1:  # this block must come after param(...)
-$ConfigurationId = "DocIgLibWithSources"
+$ConfigurationId = "ModuleDocWithSources"
 $IsSourcesIncluded = $true
 
 ########################### Fixed part of the script:
