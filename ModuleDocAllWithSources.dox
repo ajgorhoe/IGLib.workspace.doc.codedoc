@@ -38,7 +38,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "CodeDoc: IGLibCore EXTENDED with source files"
+PROJECT_NAME           = "CodeDoc: RobotArmHelix & Helix Toolkit, with source files"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "IGLibCore EXTENDED - with other lilbraries and applications. Sources INCLUDED."
+PROJECT_BRIEF          = "RobotArmHelix application and the Helix toolkit. Sources INCLUDED."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -767,8 +767,8 @@ WARN_LOGFILE           = ModuleDocAllWithSources.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../src"  \
-					"../../tests"  \
+					"../../RobotArmHelix/RobotArmHelix"  \
+					"../../helix-toolkit\Source"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -805,7 +805,21 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                "../../src/0InitModules"  \
+                          "../../RobotArmHelix/0InitModules"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Assim.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Geometry.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Maths.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Assimp.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.WinUI.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.TDxInput.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.Tests"  \
+
+# This did not work:
+#                          "../../helix-toolkit/Source/*HelixToolkit.*Tests"  \
+#                          "../../helix-toolkit/Source/*Helix*.Tests"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
