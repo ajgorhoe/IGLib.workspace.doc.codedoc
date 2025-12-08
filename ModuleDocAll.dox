@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "RobotArmHelix application and the Helix toolkit."
+PROJECT_BRIEF          = "RobotArmHelix application and the Helix Toolkit."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -806,7 +806,7 @@ RECURSIVE              = YES
 
 EXCLUDE                =  "./"    \
                           "../../RobotArmHelix/0InitModules"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Assim.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Assimp.Tests"  \
                           "../../helix-toolkit/Source/HelixToolkit.Geometry.Tests"  \
                           "../../helix-toolkit/Source/HelixToolkit.Maths.Tests"  \
                           "../../helix-toolkit/Source/HelixToolkit.SharpDX.Assimp.Tests"  \
