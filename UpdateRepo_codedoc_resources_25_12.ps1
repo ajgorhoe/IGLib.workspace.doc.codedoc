@@ -38,7 +38,7 @@ $UpdatingScriptPath = "./UpdateOrCloneRepository.ps1"
 #    in the same order as that script's parameters:
 
 $global:CurrentRepo_Directory = "../codedoc_resources/"
-$global:CurrentRepo_Ref = "master"
+$global:CurrentRepo_Ref = "main"
 $global:CurrentRepo_Address = "https://github.com/ajgorhoe/codedoc_resources_25_12/"
 $global:CurrentRepo_Remote = "origin"
 $global:CurrentRepo_AddressSecondary = $null
