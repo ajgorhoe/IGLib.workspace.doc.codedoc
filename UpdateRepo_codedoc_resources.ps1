@@ -1,3 +1,10 @@
+
+# This script checks out at ../codedoc_resources the repository that
+# contains Doxygen and Graphviz binaries necessary to generate code
+# documentation, from the repository codedoc_resources. This repository # contais older version of binaries but does not require Git LFS. See the
+# README.md at
+# https://github.com/ajgorhoe/IGLib.workspace.codedoc_resources/blob/master/README.md
+
 <#
     .SYNOPSIS
     Updates or clones a specific repository by calling UpdateOrCloneRepository.ps1 
