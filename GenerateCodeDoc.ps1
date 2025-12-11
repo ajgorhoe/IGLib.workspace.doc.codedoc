@@ -100,6 +100,10 @@ $scriptDir = Split-Path $scriptPath -Parent
 
 # Update the binaries repository, ../codedoc_resources:
 $updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources.ps1")
+# New binaries repositrry, does not work yet (needs adaptation of .dox files)
+# (Join-Path $scriptDir "UpdateRepo_codedoc_resources_25_12.ps1")
+# Old binaries repository:
+# (Join-Path $scriptDir "UpdateRepo_codedoc_resources.ps1")
 $binariesDir = (Join-Path $scriptDir "../codedoc_resources/")
 $binariesDirGit = (Join-Path $binariesDir ".git/")
 # Canonize the above two paths:
