@@ -99,7 +99,7 @@ $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
 
 # Update the binaries repository, ../codedoc_resources:
-$updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources.ps1")
+$updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources_25_12.ps1")
 # New binaries repositrry, does not work yet (needs adaptation of .dox files)
 # (Join-Path $scriptDir "UpdateRepo_codedoc_resources_25_12.ps1")
 # Old binaries repository:
@@ -170,6 +170,9 @@ if (-not ($env:PATH -split [System.IO.Path]::PathSeparator | ForEach-Object { $_
 Write-Host ""
 Write-Host "New path: $env:PATH"
 Write-Host ""
+
+$env:DOT_GRAPH_MAX_NODES = 300
+Write-Host "`nIncreased DOT_GRAPH_MAX_NODES to $($env:DOT_GRAPH_MAX_NODES) .`n"
 
 Write-Host "`nCreating code documentation for configuration `"$ConfigurationId`"...`n"
 Write-Host "Executing:"
