@@ -171,6 +171,9 @@ Write-Host ""
 Write-Host "New path: $env:PATH"
 Write-Host ""
 
+$env:DOT_GRAPH_MAX_NODES = 300
+Write-Host "`nIncreased DOT_GRAPH_MAX_NODES to $($env:DOT_GRAPH_MAX_NODES) .`n"
+
 Write-Host "`nCreating code documentation for configuration `"$ConfigurationId`"...`n"
 Write-Host "Executing:"
 Write-Host "  & $doxygenExe $doxygenConfig"
