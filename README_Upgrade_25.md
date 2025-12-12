@@ -7,7 +7,16 @@ In December 2025, a new repository with Doxygen and Graphviz binarias was prepar
 
 ## Upgrade
 
-### Errors Reeported with the NEW Binaries
+### Switching Between Old and New Binaries
+
+In order to switch between the new and the old binaries, just **change in `GenerateCodeDoc.ps1`** which **script for checking out binaries repository** is called:
+
+* `UpdateRepo_codedoc_resources.ps1` for old binaries
+* `UpdateRepo_codedoc_resources_25_12.ps1` for the new binaries
+
+If the **binaries repository** is **already checked out** at `../codedoc_resources` and it is **not the intended one** then you also need to **remove it**. Which variant of the repository is checked out at that location can be easily checked by looking at the name of the `.url` file that points to the repository, e.g. existence of the `repo__codedoc_resources_25_12.url` file means that the repository is the new one, `codedoc_resources_25_12`. On Windows OS, you can double-click the `.url` file to open the repository page on Windows. Both repositories are checked out (by the aforementioned scripts) to the same directory because binaries need to be at the same relative locations to the clone directory of the `codedoc` repository.
+
+### Errors Reeported with the New Binaries
 
 
 
