@@ -39,7 +39,7 @@ $UpdatingScriptPath = "./UpdateOrCloneRepository.ps1"
 
 $global:CurrentRepo_Directory = "../codedoc_resources/"
 $global:CurrentRepo_Ref = "main"
-$global:CurrentRepo_Address = "https://github.com/iglib/codedoc_resources_25_12/"
+$global:CurrentRepo_Address = "https://github.com/ajgorhoe/codedoc_resources_25_12/"
 # When adapting this repository for documenting your own dource code,
 # please create your own fork of the codedoc_resources_25_12 repository
 # and reference it, e.g., similar as user IOPTLib:
