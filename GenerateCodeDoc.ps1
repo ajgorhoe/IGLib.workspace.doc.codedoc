@@ -99,7 +99,7 @@ $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path $scriptPath -Parent
 
 # Update the binaries repository, ../codedoc_resources:
-$updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources.ps1")
+$updateBinariesScript = (Join-Path $scriptDir "UpdateRepo_codedoc_resources_25_12.ps1")
 # New binaries repositrry, does not work yet (needs adaptation of .dox files)
 # (Join-Path $scriptDir "UpdateRepo_codedoc_resources_25_12.ps1")
 # Old binaries repository:
