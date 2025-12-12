@@ -10,7 +10,9 @@
 * [Use with IGLib](#use-with-the-investigative-generic-library-iglib)
 * [Customizing the Repository for Other Software Projects](#customizing-the-repository-for-other-software-projects)
 * [Use with the Legacy IGLib](#use-with-the-legacy-iglib)
+* [Switching Doxygen Binaries](#switching-doxygen-binaries)
 * [Misc Remarks](#miscellaneous-remarks)
+* [License](#license-and-terms-of-use)
 
 ## About this Repository
 
@@ -156,6 +158,10 @@ There are **different flavors of documentation** for the same code project, whic
 For additional information, you can also check the readme file of the above container repository (e.g., for information about how to properly clone and use IGLib repositories). Useful informatoin can also be found in the `README.md` file of IGLib base repository located at:
 
 > *https://github.com/ajgorhoe/IGLib.workspace.base.iglib.git*
+
+## Switching Doxygen Binaries
+
+There are two repositories contianing Doxygen binaries that can be used with this repository: [codedoc_resources](https://github.com/ajgorhoe/IGLib.workspace.codedoc_resources) and the newer [codedoc_resources_25_12](https://github.com/ajgorhoe/codedoc_resources_25_12). The latter uses Git LFS (Large File Storage) while the dirst one does not depend on it. Which binaries are used can be switched by changing the appropriate script for cloning the binaries repository within the `GenerateCodeDoc.ps1`. You can find more details in [README_Upgrade_25.md](./README_Upgrade_25.md).
 
 ## Miscellaneous Remarks
 
