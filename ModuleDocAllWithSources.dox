@@ -38,7 +38,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "CodeDoc: RobotArmHelix & Helix Toolkit, with source files"
+PROJECT_NAME           = "Learn C# - Extended, with Sources"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "RobotArmHelix application and the Helix toolkit. Sources INCLUDED."
+PROJECT_BRIEF          = "Extended code documentation with source files: Code for learning C#."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -158,7 +158,7 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = "../../"
+STRIP_FROM_PATH        = "../../src"
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -767,8 +767,7 @@ WARN_LOGFILE           = ModuleDocAllWithSources.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../RobotArmHelix/RobotArmHelix"  \
-					"../../helix-toolkit\Source"  \
+					"../../src"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -805,21 +804,7 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                          "../../RobotArmHelix/0InitModules"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Assim.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Geometry.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Maths.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Assimp.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.WinUI.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.TDxInput.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.Tests"  \
-
-# This did not work:
-#                          "../../helix-toolkit/Source/*HelixToolkit.*Tests"  \
-#                          "../../helix-toolkit/Source/*Helix*.Tests"  \
+                          # "../../src/3_Classes\Examples_Classes\Examples_Classes_UnitTests"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
