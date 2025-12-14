@@ -38,7 +38,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "Learn C# - Extended"
+PROJECT_NAME           = "CodeDoc: RobotArmHelix & Helix Toolkit, with source files"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -50,7 +50,7 @@ PROJECT_NUMBER         = 2.1.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "Extended code documentation: Code for learning C#."
+PROJECT_BRIEF          = "RobotArmHelix application and the Helix toolkit. Sources INCLUDED."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
@@ -64,7 +64,7 @@ PROJECT_LOGO           = ../../IGLibCore/images/ig.bmp
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = generated/ModuleDocAll
+OUTPUT_DIRECTORY       = generated_with_sources/ModuleDocAllWithSources
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -754,7 +754,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # messages should be written. If left blank the output is written to standard
 # error (stderr).
 
-WARN_LOGFILE           = ModuleDocAll.log
+WARN_LOGFILE           = ModuleDocAllWithSources.log
 
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
@@ -804,7 +804,21 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                          # "../../src/3_Classes\Examples_Classes\Examples_Classes_UnitTests"  \
+                          "../../RobotArmHelix/0InitModules"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Assim.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Geometry.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Maths.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Assimp.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.WinUI.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.SharpDX.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.TDxInput.Tests"  \
+                          "../../helix-toolkit/Source/HelixToolkit.Wpf.Tests"  \
+
+# This did not work:
+#                          "../../helix-toolkit/Source/*HelixToolkit.*Tests"  \
+#                          "../../helix-toolkit/Source/*Helix*.Tests"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
@@ -919,7 +933,7 @@ USE_MDFILE_AS_MAINPAGE =
 # also VERBATIM_HEADERS is set to NO.
 # The default value is: NO.
 
-SOURCE_BROWSER         = NO
+SOURCE_BROWSER         = YES
 
 # Setting the INLINE_SOURCES tag to YES will include the body of functions,
 # classes and enums directly into the documentation.
@@ -1116,7 +1130,7 @@ HTML_STYLESHEET        =
 # list). For an example see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET  =   css/styles.css
+HTML_EXTRA_STYLESHEET  =  css/teststyles.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
