@@ -57,7 +57,8 @@ PROJECT_BRIEF          = "Code documentation: Code for learning C#."
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO           = ../../IGLibCore/images/ig.bmp
+PROJECT_LOGO           = images/Logo_C_sharp_44x50.svg
+
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
