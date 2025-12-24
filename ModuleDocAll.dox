@@ -38,26 +38,26 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "CodeDoc: RobotArmHelix app & Helix Toolkit"
+PROJECT_NAME           = "VTK (Vizualization Toolkit), Extended"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 2.1.0
+PROJECT_NUMBER         = 9.5.2
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "RobotArmHelix application and the Helix Toolkit."
+PROJECT_BRIEF          = "Vizualization Toolkit (VTK) Extended - image processing, 3D graphics, volume rendering and visualization."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO           = ../../IGLibCore/images/ig.bmp
+PROJECT_LOGO           = ./images/VisualizationToolkit_Logo_92x50.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -767,8 +767,7 @@ WARN_LOGFILE           = ModuleDocAll.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../RobotArmHelix/RobotArmHelix"  \
-					"../../helix-toolkit\Source"  \
+					"../../VTK/Common/ComputationalGeometry"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -789,7 +788,8 @@ INPUT_ENCODING         = UTF-8
 # *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
 # *.qsf, *.as and *.js.
 
-FILE_PATTERNS          = *.cs
+FILE_PATTERNS          = *.c, *.cc, *.cxx, *.cpp, *.c++, *.h, *.hh, *.hxx,  \
+                         *.hpp, *.h++
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
@@ -806,20 +806,6 @@ RECURSIVE              = YES
 
 EXCLUDE                =  "./"    \
                           "../../RobotArmHelix/0InitModules"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Assimp.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Geometry.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Maths.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Assimp.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.WinUI.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.SharpDX.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.TDxInput.Tests"  \
-                          "../../helix-toolkit/Source/HelixToolkit.Wpf.Tests"  \
-
-# This did not work:
-#                          "../../helix-toolkit/Source/*HelixToolkit.*Tests"  \
-#                          "../../helix-toolkit/Source/*Helix*.Tests"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
