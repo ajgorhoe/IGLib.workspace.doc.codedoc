@@ -767,7 +767,7 @@ WARN_LOGFILE           = ModuleDoc.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../VTK/Common/ComputationalGeometry"  \
+					"../../VTK"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -805,7 +805,12 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                          "../../RobotArmHelix/0InitModules"  \
+                          "../../VTK/CMake"  \
+                          "../../VTK/Documentation"  \
+                          "../../VTK/Remote"  \
+                          "../../VTK/Testing"  \
+                          "../../VTK/Wrapping"  \
+                          "../../VTK/Examples"  \
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
