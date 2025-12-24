@@ -809,9 +809,9 @@ EXCLUDE                =  "./"    \
                           "../../VTK/Documentation"  \
                           "../../VTK/Remote"  \
                           "../../VTK/ThirdParty/mpi4py"  \
-#                          "../../VTK/Wrapping"  \
-#                          "../../VTK/Testing"  \
-#                          "../../VTK/Examples"  \
+                          "../../VTK/Wrapping"  \
+                          "../../VTK/Testing"  \
+                          "../../VTK/Examples"  \
 
 # Remark:
 # ThirdParty/mpi4py was excluded because it prevented generation of documentation.
