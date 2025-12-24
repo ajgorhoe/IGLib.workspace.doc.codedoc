@@ -767,7 +767,7 @@ WARN_LOGFILE           = ModuleDocAllWithSources.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT           =   \
-					"../../VTK/Common/ComputationalGeometry"  \
+					"../../VTK"  \
 
 
 # This tag can be used to specify the character encoding of the source files
@@ -805,7 +805,16 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                =  "./"    \
-                          "../../RobotArmHelix/0InitModules"  \
+                          "../../VTK/CMake"  \
+                          "../../VTK/Documentation"  \
+                          "../../VTK/Remote"  \
+                          "../../VTK/ThirdParty/mpi4py"  \
+#                          "../../VTK/Wrapping"  \
+#                          "../../VTK/Testing"  \
+#                          "../../VTK/Examples"  \
+
+# Remark:
+# ThirdParty/mpi4py was excluded because it prevented generation of documentation.
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
