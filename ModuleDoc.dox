@@ -808,8 +808,9 @@ EXCLUDE                =  "./"    \
                           "../../VTK/CMake"  \
                           "../../VTK/Documentation"  \
                           "../../VTK/Remote"  \
-                          "../../VTK/Testing"  \
+                          "../../VTK/ThirdParty/mpi4py"  \
                           "../../VTK/Wrapping"  \
+                          "../../VTK/Testing"  \
                           "../../VTK/Examples"  \
 
 
